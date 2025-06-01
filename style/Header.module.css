@@ -1,0 +1,39 @@
+.top_header{
+    background-color: rgba(3, 4, 1, 1);
+}
+
+
+.header{
+    background-color: rgba(3, 4, 1, 1);
+}
+
+.bottom_header{
+    background-color: rgba(88, 88, 88, 1);
+}
+
+.input_search{
+    background-color: rgba(240, 240, 239, 1);
+}
+
+.data_time{
+position:relative
+}
+
+.data_time::before{
+    content:'';
+    position:absolute;
+    left:0;
+top:0;
+width:2px; 
+height:100%;
+margin-left:-10px;
+ background-color:white
+}
+
+
+@media (max-width:767px) {
+    .data_time::before{
+    content:none;
+    position:none
+}
+}

@@ -1,0 +1,29 @@
+.active {
+border-bottom: 1px solid black;
+}
+
+.nav_border{
+    border-top:1px solid gray;
+    border-bottom:1px solid gray;
+}
+
+@media (max-width:767px) {
+    
+.nav_border{
+    border-top:none;
+    border-bottom:none;
+}
+}
+.products{
+
+
+}
+
+
+.cat_type{
+    color:rgba(86, 88, 75, 1)
+}
+
+.price_before_discount,.money_saved{
+color:rgba(157, 159, 147, 1)
+}

@@ -1,7 +1,8 @@
 {
   "compilerOptions": {
-    "paths": {
-      "@/*": ["./*"]
-    }
-  }
+    "target": "ES6",
+    "module": "commonjs",
+    "baseUrl": "."
+  },
+  "exclude": ["node_modules", ".next", "dist"]
 }

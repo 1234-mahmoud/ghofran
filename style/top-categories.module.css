@@ -1,0 +1,13 @@
+.topcat {
+  background: radial-gradient(
+      117.32% 117.32% at 50% 46.48%,
+      #ffffff 0%,
+      #e4e5e1 100%
+    )
+    /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */;
+}
+
+.cat_img {
+  width: 141px;
+  height: 174px;
+}

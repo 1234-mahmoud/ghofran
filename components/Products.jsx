@@ -4,7 +4,7 @@ import { AiFillStar } from "react-icons/ai";
 import classes from "../style/products.module.css";
 
 import Image from "next/image";
-import pic from "@/assets/pic.jpg";
+import pic from "../assets/pic.jpg";
 import ProductsCat from "./ProductsCat";
 export default function Products() {
   return (

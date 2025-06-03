@@ -10,6 +10,7 @@ const Footer = () => {
     <div
       className={`
     w-full h-[486px] 
+   
     flex flex-col justify-between
     mt-[150px]
     max-sm:h-full

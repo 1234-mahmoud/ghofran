@@ -1,0 +1,48 @@
+
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #444;
+
+  /* Center slide text vertically */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.swiperWrapper :global(.swiper-pagination-bullet) {
+  background-color: #000000;
+  /* opacity: 0.5; */
+  width: 30px;
+  height: 10px;
+  margin: 0 6px;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+}
+
+.swiperWrapper :global(.swiper-pagination-bullet-active) {
+  background-color: #151515; /* amber-400 */
+  /* opacity: 1; */
+  width: 80px;
+  height: 10px;
+  border-radius:12px;
+}
+
+.img_{
+transform: translate(-50%,-50%);
+position: absolute;
+top:50%;
+left: 50%;
+}

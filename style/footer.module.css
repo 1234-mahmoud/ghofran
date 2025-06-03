@@ -1,0 +1,13 @@
+.top_footer{
+    display: grid;
+    grid-template-columns: 149px 194px 123px 302px 467px;
+    justify-content: space-around;
+    gap: 89px;
+}
+
+@media (max-width:767px){
+    .top_footer{
+        grid-template-columns: 100%;
+        gap: 24px;
+    }
+}

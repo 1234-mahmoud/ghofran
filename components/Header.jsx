@@ -9,6 +9,7 @@ import classes from "../style/Header.module.css";
 import Link from "next/link";
 import { ContextProvider } from "context/AppProvider";
 import ProductsCat from "./ProductsCat";
+import Image from "next/image";
 export default function Header() {
   const { show,
     setShow,
@@ -89,10 +90,12 @@ export default function Header() {
         
         `}
       >
-        <div className={`logo w-[101px] h-[88px] bg-amber-100
+        <div className={`logo w-[150px] h-[90px]
           max-sm:w-[50px] max-sm:h-[50px] max-sm:rounded-full
           
-          `}>logo</div>
+          `}>
+            <Image src='/logo.svg' alt="logo" width={101} height={88}/>
+          </div>
 
         <div
           className={`utilities w-full max-w-[656px]  flex items-center gap-[48px] 

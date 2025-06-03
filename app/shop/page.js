@@ -1,9 +1,17 @@
 import Products from "../../components/Products";
 
-export default function Shop() {
+export default async function Shop() {
+  await new Promise((resolve) => setTimeout(resolve, 2000));
   return (
     <div>
-      <Products/>
+      <Products />
     </div>
-  )
+  );
 }
+
+
+/**
+    <Suspense fallback={<p className={classes.loading}>Looding....</p>}>
+       <Products />
+     </Suspense>
+ */

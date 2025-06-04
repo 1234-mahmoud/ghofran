@@ -45,33 +45,10 @@ const TopCategories = () => {
     `}
       >
         {data.map((item, idx) => (
-          <div
-            key={idx}
-            className={`
-         w-full
-        `}
-          >
-            <Link
-              href={`/${item.page}`}
-              className={`flex flex-col justify-center items-center
-            
-                `}
-            >
-              <Image
-                src={item.img}
-                alt={item.title}
-                width={141}
-                height={174}
-                className={`
-    ${classes.cat_img}
-    rounded-md
-    `}
-              />
-              <h4
-                className={`
-    font-[700] text-[2rem] leading-[40px]
-    `}
-              >
+          <div key={idx} className={`w-full`}>
+            <Link href={`/${item.page}`} className={`flex flex-col justify-center items-center`}>
+              <Image src={item.img} alt={item.title} width={141} height={174} className={`${classes.cat_img} rounded-md`}/>
+              <h4 className={`font-[700] text-[2rem] leading-[40px]`}>
                 {item.title}
               </h4>
             </Link>

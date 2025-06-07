@@ -3,26 +3,11 @@ import Image from "next/image";
 import Link from "next/link";
 const TopCategories = () => {
   const data = [
-    {page:'natural_oils_products',
-      img: "/pic.jpg",
-      title: "natural oils",
-    },
-    {page:'hair_products',
-      img: "/pic.jpg",
-      title: "hair",
-    },
-    {page:'face_products',
-      img: "/pic.jpg",
-      title: "face",
-    },
-    {page:'body_products',
-      img: "/pic.jpg",
-      title: "body",
-    },
-    {page:'all_products',
-      img: "/pic.jpg",
-      title: "products",
-    },
+    { page: "natural_oils_products", img: "/pic.jpg", title: "natural oils" },
+    { page: "hair_products", img: "/pic.jpg", title: "hair" },
+    { page: "face_products", img: "/pic.jpg", title: "face" },
+    { page: "body_products", img: "/pic.jpg", title: "body" },
+    { page: "all_products", img: "/pic.jpg", title: "products" },
   ];
 
   return (
@@ -46,8 +31,21 @@ const TopCategories = () => {
       >
         {data.map((item, idx) => (
           <div key={idx} className={`w-full`}>
-            <Link href={`/${item.page}`} className={`flex flex-col justify-center items-center`}>
-              <Image src={item.img} alt={item.title} width={141} height={174} className={`${classes.cat_img} rounded-md`}/>
+            <Link
+              href={`/${item.page}`}
+              className={`flex flex-col justify-center items-center`}
+            >
+              <div
+                className={`img_ w-[141px] h-[174px] relative max-sm:w-full max-sm:h-[300px]`}
+              >
+                <Image
+                  src={item.img}
+                  alt={item.title}
+                  fill
+                  className={`${classes.cat_img} rounded-md`}
+                />
+              </div>
+
               <h4 className={`font-[700] text-[2rem] leading-[40px]`}>
                 {item.title}
               </h4>

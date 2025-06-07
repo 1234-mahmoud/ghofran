@@ -20,6 +20,8 @@ const Footer = () => {
         className={`${classes.top_footer}
         w-full h-[322px]
         max-sm:h-full
+    px-[140px]
+
         `}
       >
         <div

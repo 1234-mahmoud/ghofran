@@ -1,44 +1,48 @@
 'use client'
 
-import React, { useRef, useState } from 'react';
-// Import Swiper React components
+import React from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import Image from 'next/image';
-// Import Swiper styles
+
 import 'swiper/css';
 import 'swiper/css/pagination';
 
 import classes from '../style/slide.module.css';
 
-// import required modules
-import { Pagination } from 'swiper/modules';
-
-
+import { Pagination, Autoplay } from 'swiper/modules';
 
 export default function Slider() {
   return (
     <>
       <Swiper
         pagination={{
-          dynamicBullets: true,    
+          dynamicBullets: true,
+          clickable: true,
         }}
-        modules={[Pagination]}
+        autoplay={{
+          delay: 5000,
+          disableOnInteraction: false,
+        }}
+        loop={true} // infinite forward loop
+        speed={1500} // smooth transition speed
+        modules={[Pagination, Autoplay]}
         className={`${classes.swiperWrapper} mySwiper 
-            w-full max-w-[90%] mt-[50px] mb-[100px] ml-auto mr-auto h-[540px]  relative
+            w-full max-w-[90%] mt-[50px] mb-[100px] mx-auto h-[540px] relative
             rounded-md
-            
-            `}
+        `}
       >
         <SwiperSlide>
-            <Image src="/pic.jpg" alt="slide-img" width={500} height={500} className={`${classes.img_}`}/>
+          <Image src="/pic.jpg" alt="slide-img" width={500} height={500} className={classes.img_} />
         </SwiperSlide>
         <SwiperSlide>
-            <Image src="/pic.jpg" alt="slide-img" width={500} height={500} className={`${classes.img_}`}/>
+          <Image src="/pic.jpg" alt="slide-img" width={500} height={500} className={classes.img_} />
         </SwiperSlide>
         <SwiperSlide>
-            <Image src="/pic.jpg" alt="slide-img" width={500} height={500} className={`${classes.img_}`}/>
+          <Image src="/pic.jpg" alt="slide-img" width={500} height={500} className={classes.img_} />
         </SwiperSlide>
       </Swiper>
+
+    
     </>
   );
 }

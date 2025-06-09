@@ -1,0 +1,137 @@
+.navContainer {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+  display: flex;
+  gap: 8px;
+}
+
+.navBtn {
+    width: 36px;
+    height: 36px;
+  background: #fff;
+  border: 1px solid black;
+  border-radius: 4px;
+  padding: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  cursor: pointer;
+  font-size: 20px;
+  transition: background 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.navBtn:hover {
+  background:black;
+  color: white;
+}
+
+.txt{
+  color: #56584B;
+}
+
+.txt1{
+  color: #030401;
+}
+
+.bg{
+  background-color: #E4E5E1;
+}
+
+.txt2{
+  color:#9D9F93;
+}
+.txt3{
+  color: #56584B;
+}
+
+.txt4{
+  color: #101207;
+}
+
+.btn1{
+  color: white;
+  background-color: #56584B;
+}
+
+.btn2{
+  color: ghostwhite;
+  background-color: #E4E5E1;
+}
+
+.btns{
+  position: relative;
+}
+
+.btns::after{
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 1.5px;
+  background-color: rgb(42, 42, 42);
+  bottom: -40px;
+}
+
+.radio{
+  color: #56584B;
+}
+
+.payment{
+  position: relative;
+}
+
+.payment::after{
+  content: "";
+  position: absolute;
+  width: 97%;
+  height: 1.5px;
+  background-color: rgb(42, 42, 42);
+  bottom: -40px;
+  right: 0;
+  left: 0;
+  margin: auto;
+}
+
+.btn_bg{
+  background-color: #ABADA3;
+}
+
+.quantity{
+  position: relative;
+}
+
+.quantity::after{
+  content: "";
+  position: absolute;
+  width: 97%;
+  height: 2px;
+  background-color: rgb(71, 71, 71);
+  bottom: -40px;
+  right: 0;
+  left: 0;
+  margin: auto;
+}
+
+
+.delivary{
+  position: relative;
+}
+
+.delivary::after{
+  content: "";
+  position: absolute;
+  width: 97%;
+  height: 1.4px;
+  background-color: rgb(71, 71, 71);
+  top: 10px;
+  right: 0;
+  left: 0;
+  margin: auto;
+}
+
+.ship_link{
+  color: rgb(214, 214, 74);
+}

@@ -21,13 +21,13 @@ const Customers = () => {
           flex justify-between items-center pb-[20px]
           `}
         >
-             <div className={``}>
+             <div className={`flex flex-col justify-center items-center gap-[16px] mx-auto`}>
               <h1
-                className={`font-[700] text-[56px] leading-[64px] text-center`}
+                className={`font-[700] text-[56px] leading-[64px]`}
               >
                 What Our Customers Say?
               </h1>
-              <p>Real reviews from happy shoppers who love Ghufran’s quality and service.</p>
+              <p className={`font-[700] text-[20px] leading-[40px] tracking-[1px] text-gray-700`}>Real reviews from happy shoppers who love Ghufran’s quality and service.</p>
             </div>
           {/* Custom navigation buttons */}
           <div

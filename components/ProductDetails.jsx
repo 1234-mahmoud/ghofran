@@ -458,7 +458,7 @@ const ProductDetails = () => {
             </div>
             <div className={`${classes.delivary} px-[8px] pt-[40px]`}>
               <p
-                className={`flex gap-[8px] items-center font-[400] text-[14px] leading-[24px]`}
+                className={`flex gap-[8px] items-center font-[400] text-[14px] leading-[24px] max-sm:my-[20px]`}
               >
                 <AiFillTruck className="text-[18px]" />
                 Delivers in: 3-7 Working Days{" "}

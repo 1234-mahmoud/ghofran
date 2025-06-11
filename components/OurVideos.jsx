@@ -15,7 +15,7 @@ const OurVideos = () => {
   const nextRef = useRef(null);
 
   return (
-    <div className="container mx-auto my-[250px] px-4 relative">
+    <div className="container mx-auto my-[250px] px-4 relative max-sm:mb-[-100px]">
       <div className="relative">
         <div
           className={`

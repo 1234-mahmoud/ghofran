@@ -65,6 +65,11 @@
   right: -30px;
 }
 
+@media (max-width:767px) {
+  .rev::after {
+  content: none;}
+}
+
 .rev_btn {
   background-color: #56584b;
 }

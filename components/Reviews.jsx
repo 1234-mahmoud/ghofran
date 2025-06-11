@@ -64,13 +64,14 @@ const Reviews = ({ params }) => {
       {/* -------------------------content--------------------------------- */}
       <div
         className={`flex items-center gap-[64px] flex-wrap w-full max-w-[1309px] h-[248px] mx-auto my-[100px] 
-          max-sm:h-full max-sm:mx-1 
+          max-sm:h-full max-sm:mx-1 max-sm:mt-[200px] max-sm:justify-center
           
           `}
       >
         <div className={`${classes.rev} flex flex-col gap-[36px]
-        
-        `}>
+                max-sm:gap-[20px] 
+                
+                `}>
           <p
             className={` 
           font-[700] text-[20px] leading-[40px] tracking-[1px] text-gray-900
@@ -78,7 +79,9 @@ const Reviews = ({ params }) => {
           >
             customer review
           </p>
-          <div className={`rev_nums flex items-center gap-[36px]`}>
+          <div className={`rev_nums flex items-center gap-[36px] 
+            max-sm:flex-col
+            `}>
             <div className={`rev_nums flex flex-col items-center gap-[8px]`}>
               <h2
                 className={` 
@@ -118,35 +121,45 @@ const Reviews = ({ params }) => {
                 <li className={`flex gap-[10px] justify-ceneter items-center`}>
                   5{" "}
                   <div
-                    className={`w-[323px] h-[10px] rounded-md bg-gray-300 ${classes.rate} ${classes.rate1}`}
+                    className={`w-[323px]  h-[10px] rounded-md bg-gray-300 ${classes.rate} ${classes.rate1}
+                    max-sm:w-[250px]
+                    `}
                   ></div>
                   <span>(20 Review)</span>
                 </li>
                 <li className={`flex gap-[10px] justify-ceneter items-center`}>
                   4{" "}
                   <div
-                    className={`w-[323px] h-[10px] rounded-md bg-gray-300 ${classes.rate} ${classes.rate2}`}
+                    className={`w-[323px] h-[10px] rounded-md bg-gray-300 ${classes.rate} ${classes.rate2}
+                    max-sm:w-[250px]
+                    `}
                   ></div>
                   <span> (7 Review)</span>
                 </li>
                 <li className={`flex gap-[10px] justify-ceneter items-center`}>
                   3{" "}
                   <div
-                    className={`w-[323px] h-[10px] rounded-md bg-gray-300 ${classes.rate} ${classes.rate3}`}
+                    className={`w-[323px] h-[10px] rounded-md bg-gray-300 ${classes.rate} ${classes.rate3}
+                    max-sm:w-[250px]
+                    `}
                   ></div>
                   <span>(4 Review)</span>
                 </li>
                 <li className={`flex gap-[10px] justify-ceneter items-center`}>
                   2{" "}
                   <div
-                    className={`w-[323px] h-[10px] rounded-md bg-gray-300 ${classes.rate} ${classes.rate4}`}
+                    className={`w-[323px] h-[10px] rounded-md bg-gray-300 ${classes.rate} ${classes.rate4}
+                    max-sm:w-[250px]
+                    `}
                   ></div>
                   <span>(1 Review)</span>
                 </li>
                 <li className={`flex gap-[10px] justify-ceneter items-center`}>
                   1{" "}
                   <div
-                    className={`w-[323px] h-[10px] rounded-md bg-gray-300 ${classes.rate} ${classes.rate5}`}
+                    className={`w-[323px] h-[10px] rounded-md bg-gray-300 ${classes.rate} ${classes.rate5}
+                    max-sm:w-[250px]
+                    `}
                   ></div>
                   <span>(3 Review)</span>
                 </li>
@@ -157,7 +170,8 @@ const Reviews = ({ params }) => {
         {/* ------------------------------------------------------------------------- */}
         <button
           className={`w-full max-w-[522px] h-[48px] text-white rounded-md ${classes.rev_btn}
-      font-[700] text-[16px] leading-[16px] tracking-[1px] cursor-pointer
+      font-[700] text-[16px] leading-[16px] tracking-[1px] cursor-pointer 
+      max-sm:w-[300px]
       `}
         >
           write review
@@ -167,12 +181,14 @@ const Reviews = ({ params }) => {
       <div
         className={`customer_review 
         w-full max-w-[1643px] h-full px-[112px] flex flex-col gap-[40px] max-sm:px-[5px]
+      
         `}
       >
         <div
           className={`${classes.select_comp} 
        border-[1px] border-gray-300 rounded-sm w-full max-w-[343px] 
        flex flex-col justify-center items-center gap-[8px]
+       max-sm:mx-auto
       `}
         >
           <label

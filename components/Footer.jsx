@@ -14,6 +14,7 @@ const Footer = () => {
     flex flex-col justify-between
     mt-[150px]
     max-sm:h-full  
+    relative bottom-0
     `}
     >
       <div

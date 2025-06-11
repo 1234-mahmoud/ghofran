@@ -13,7 +13,7 @@ const Footer = () => {
    
     flex flex-col justify-between
     mt-[150px]
-    max-sm:h-full
+    max-sm:h-full  
     `}
     >
       <div
@@ -21,7 +21,7 @@ const Footer = () => {
         w-full h-[322px]
         max-sm:h-full
     px-[140px]
-
+max-sm:px-[20px]
         `}
       >
         <div

@@ -3,9 +3,21 @@ import classes from "../style/reviews.module.css";
 import Link from "next/link";
 import { useParams } from "next/navigation";
 import { IoStar } from "react-icons/io5";
+import { IoIosArrowDropright } from "react-icons/io";
+import { useState } from "react";
+
 const Reviews = ({ params }) => {
   // const { product_id } = params;
+  const [show, setShow] = useState(false);
+  const [transform,settransform] = useState(false)
+  const toggle = () => {
+    setShow(!show);
+    settransform(!transform)
+  };
 
+
+
+  const now = new Date();
   return (
     <div>
       {/* <nav>
@@ -50,69 +62,310 @@ const Reviews = ({ params }) => {
         </Link>
       </nav> */}
       {/* -------------------------content--------------------------------- */}
-      <div className={`flex items-center gap-[64px] flex-wrap w-full max-w-[1309px] h-[248px] mx-auto my-[100px]`}>
-        <div className={`${classes.rev} flex flex-col gap-[36px]`}>
-        <p className={` 
+      <div
+        className={`flex items-center gap-[64px] flex-wrap w-full max-w-[1309px] h-[248px] mx-auto my-[100px] 
+          max-sm:h-full max-sm:mx-1 
+          
+          `}
+      >
+        <div className={`${classes.rev} flex flex-col gap-[36px]
+        
+        `}>
+          <p
+            className={` 
           font-[700] text-[20px] leading-[40px] tracking-[1px] text-gray-900
-          `}>customer review</p>
-        <div className={`rev_nums flex items-center gap-[36px]`}>
-          <div className={`rev_nums flex flex-col items-center gap-[8px]`}>
-            <h2 className={` 
+          `}
+          >
+            customer review
+          </p>
+          <div className={`rev_nums flex items-center gap-[36px]`}>
+            <div className={`rev_nums flex flex-col items-center gap-[8px]`}>
+              <h2
+                className={` 
           font-[700] text-[48px] leading-[56px] text-gray-900
-          `}>4.5</h2>
-            <div className="flex gap-[3px]">
-              <button>
-                <IoStar className="text-gray-400 w-[24px] h-[24px] cursor-pointer" />
-              </button>
-              <button>
-                <IoStar className="text-gray-400 w-[24px] h-[24px] cursor-pointer" />
-              </button>
-              <button>
-                <IoStar className="text-gray-400 w-[24px] h-[24px] cursor-pointer" />
-              </button>
-              <button>
-                <IoStar className="text-gray-400 w-[24px] h-[24px] cursor-pointer" />
-              </button>
-              <button>
-                <IoStar className="text-gray-400 w-[24px] h-[24px] cursor-pointer" />
-              </button>
-            </div>
-        <span className={` 
+          `}
+              >
+                4.5
+              </h2>
+              <div className="flex gap-[3px]">
+                <button>
+                  <IoStar className="text-gray-400 w-[24px] h-[24px] cursor-pointer" />
+                </button>
+                <button>
+                  <IoStar className="text-gray-400 w-[24px] h-[24px] cursor-pointer" />
+                </button>
+                <button>
+                  <IoStar className="text-gray-400 w-[24px] h-[24px] cursor-pointer" />
+                </button>
+                <button>
+                  <IoStar className="text-gray-400 w-[24px] h-[24px] cursor-pointer" />
+                </button>
+                <button>
+                  <IoStar className="text-gray-400 w-[24px] h-[24px] cursor-pointer" />
+                </button>
+              </div>
+              <span
+                className={` 
           font-[400] text-[14px] leading-[24px] text-gray-500
-          `}>  (35 Reviews)</span>
-          </div>
-          <div>
-            <ol className="flex flex-col gap-[8px]">
-              <li className={`flex gap-[10px] justify-ceneter items-center`}>
-             5   <div className={`w-[323px] h-[10px] rounded-md bg-gray-300 ${classes.rate} ${classes.rate1}`}></div>
-                <span>(20 Review)</span>
-              </li>
-              <li className={`flex gap-[10px] justify-ceneter items-center`}>
-              4  <div className={`w-[323px] h-[10px] rounded-md bg-gray-300 ${classes.rate} ${classes.rate2}`}></div>
-               <span> (7 Review)</span>
-              </li>
-              <li className={`flex gap-[10px] justify-ceneter items-center`}>
-              3  <div className={`w-[323px] h-[10px] rounded-md bg-gray-300 ${classes.rate} ${classes.rate3}`}></div>
-                <span>(4 Review)</span>
-              </li>
-              <li className={`flex gap-[10px] justify-ceneter items-center`}>
-              2  <div className={`w-[323px] h-[10px] rounded-md bg-gray-300 ${classes.rate} ${classes.rate4}`}></div>
-                <span>(1 Review)</span>
-              </li>
-              <li className={`flex gap-[10px] justify-ceneter items-center`}>
-              1  <div className={`w-[323px] h-[10px] rounded-md bg-gray-300 ${classes.rate} ${classes.rate5}`}></div>
-                <span>(3 Review)</span>
-              </li>
-            </ol>
+          `}
+              >
+                {" "}
+                (35 Reviews)
+              </span>
+            </div>
+            <div>
+              <ol className="flex flex-col gap-[8px]">
+                <li className={`flex gap-[10px] justify-ceneter items-center`}>
+                  5{" "}
+                  <div
+                    className={`w-[323px] h-[10px] rounded-md bg-gray-300 ${classes.rate} ${classes.rate1}`}
+                  ></div>
+                  <span>(20 Review)</span>
+                </li>
+                <li className={`flex gap-[10px] justify-ceneter items-center`}>
+                  4{" "}
+                  <div
+                    className={`w-[323px] h-[10px] rounded-md bg-gray-300 ${classes.rate} ${classes.rate2}`}
+                  ></div>
+                  <span> (7 Review)</span>
+                </li>
+                <li className={`flex gap-[10px] justify-ceneter items-center`}>
+                  3{" "}
+                  <div
+                    className={`w-[323px] h-[10px] rounded-md bg-gray-300 ${classes.rate} ${classes.rate3}`}
+                  ></div>
+                  <span>(4 Review)</span>
+                </li>
+                <li className={`flex gap-[10px] justify-ceneter items-center`}>
+                  2{" "}
+                  <div
+                    className={`w-[323px] h-[10px] rounded-md bg-gray-300 ${classes.rate} ${classes.rate4}`}
+                  ></div>
+                  <span>(1 Review)</span>
+                </li>
+                <li className={`flex gap-[10px] justify-ceneter items-center`}>
+                  1{" "}
+                  <div
+                    className={`w-[323px] h-[10px] rounded-md bg-gray-300 ${classes.rate} ${classes.rate5}`}
+                  ></div>
+                  <span>(3 Review)</span>
+                </li>
+              </ol>
+            </div>
           </div>
         </div>
+        {/* ------------------------------------------------------------------------- */}
+        <button
+          className={`w-full max-w-[522px] h-[48px] text-white rounded-md ${classes.rev_btn}
+      font-[700] text-[16px] leading-[16px] tracking-[1px] cursor-pointer
+      `}
+        >
+          write review
+        </button>
       </div>
-      {/* ------------------------------------------------------------------------- */}
-      <button className={`w-full max-w-[522px] h-[48px] text-white rounded-md ${classes.rev_btn}
-      font-[700] text-[16px] leading-[16px] tracking-[1px]
-      `}>write review</button>
-      </div>
+      {/* ---------------------------------------------------------------------------------------------- */}
+      <div
+        className={`customer_review 
+        w-full max-w-[1643px] h-full px-[112px] flex flex-col gap-[40px] max-sm:px-[5px]
+        `}
+      >
+        <div
+          className={`${classes.select_comp} 
+       border-[1px] border-gray-300 rounded-sm w-full max-w-[343px] 
+       flex flex-col justify-center items-center gap-[8px]
+      `}
+        >
+          <label
+            htmlFor=""
+            className={`
+        font-[700] text-[20px] leading-[40px] tracking-[1px] text-center
+         h-[64px]
+          flex justify-center items-center gap-[30px]
+          `}
+          >
+            Sort By
+            <IoIosArrowDropright
+              onClick={toggle}
+              className={`
+                ${transform?classes.rotate:classes.not_rotate}
+  text-[2rem] font-extrabold
+  `}
+            />
+          </label>
+          <div
+            className={`${classes.options} ${
+              show ? classes.show : classes.hide
+            } 
+     
+          font-[700] text-[20px] leading-[40px] tracking-[1px] text-center
+     `}
+          >
+            <div className={`${classes.parent}`}>
+              <div className={`${classes.option}`}>Excellent Review</div>
+              <div className={`${classes.option}`}>Good Review</div>
+              <div className={`${classes.option}`}>Bad Review</div>
+            </div>
+          </div>
+        </div>
+        {/* ------------------------------------------------------------- */}
+        <div
+          className={`${classes.review_} flex flex-col gap-[24px] px-[36px] py-[8px]`}
+        >
+          <div className="">
+            <div className={`flex justify-between items-center`}>
+              <div className={`flex items-center gap-[16px]`}>
+                <div
+                  className={`w-[48px] h-[48px] rounded-full bg-black`}
+                ></div>
+                <p>Mahmoud Mokhtar</p>
+              </div>
+              <div className=" text-gray-500">
+                <p>{`${now.getDate()} ${now.toLocaleString("default", {
+                  month: "long",
+                })} ${now.getFullYear()}`}</p>
+              </div>
+            </div>
+            <div className="flex gap-[3px] pl-[40px]">
+              <IoStar className="text-gray-400 w-[24px] h-[24px] cursor-pointer" />
+              <IoStar className="text-gray-400 w-[24px] h-[24px] cursor-pointer" />
+              <IoStar className="text-gray-400 w-[24px] h-[24px] cursor-pointer" />
+              <IoStar className="text-gray-400 w-[24px] h-[24px] cursor-pointer" />
+              <IoStar className="text-gray-400 w-[24px] h-[24px] cursor-pointer" />
+            </div>
+          </div>
+          <div className="box2">
+            <p
+              className={`
+              font-[400] text-[14px] leading-[24px] 
+              `}
+            >
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+              enim ad minim veniam, quis nostrud exercitation ullamco
+              consectetur adipiscing elit, sed do eiusmod tempor
+            </p>
+          </div>
+        </div>
 
+        {/* ---------------------- */}
+        <div
+          className={`${classes.review_} flex flex-col gap-[24px] px-[36px] py-[8px]`}
+        >
+          <div className="">
+            <div className={`flex justify-between items-center`}>
+              <div className={`flex items-center gap-[16px]`}>
+                <div
+                  className={`w-[48px] h-[48px] rounded-full bg-black`}
+                ></div>
+                <p>Mahmoud Mokhtar</p>
+              </div>
+              <div className=" text-gray-500">
+                <p>{`${now.getDate()} ${now.toLocaleString("default", {
+                  month: "long",
+                })} ${now.getFullYear()}`}</p>
+              </div>
+            </div>
+            <div className="flex gap-[3px] pl-[40px]">
+              <IoStar className="text-gray-400 w-[24px] h-[24px] cursor-pointer" />
+              <IoStar className="text-gray-400 w-[24px] h-[24px] cursor-pointer" />
+              <IoStar className="text-gray-400 w-[24px] h-[24px] cursor-pointer" />
+              <IoStar className="text-gray-400 w-[24px] h-[24px] cursor-pointer" />
+              <IoStar className="text-gray-400 w-[24px] h-[24px] cursor-pointer" />
+            </div>
+          </div>
+          <div className="box2">
+            <p
+              className={`
+              font-[400] text-[14px] leading-[24px] 
+              `}
+            >
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+              enim ad minim veniam, quis nostrud exercitation ullamco
+              consectetur adipiscing elit, sed do eiusmod tempor
+            </p>
+          </div>
+        </div>
+        {/* ---------------------- */}
+        <div
+          className={`${classes.review_} flex flex-col gap-[24px] px-[36px] py-[8px]`}
+        >
+          <div className="">
+            <div className={`flex justify-between items-center`}>
+              <div className={`flex items-center gap-[16px]`}>
+                <div
+                  className={`w-[48px] h-[48px] rounded-full bg-black`}
+                ></div>
+                <p>Mahmoud Mokhtar</p>
+              </div>
+              <div className=" text-gray-500">
+                <p>{`${now.getDate()} ${now.toLocaleString("default", {
+                  month: "long",
+                })} ${now.getFullYear()}`}</p>
+              </div>
+            </div>
+            <div className="flex gap-[3px] pl-[40px]">
+              <IoStar className="text-gray-400 w-[24px] h-[24px] cursor-pointer" />
+              <IoStar className="text-gray-400 w-[24px] h-[24px] cursor-pointer" />
+              <IoStar className="text-gray-400 w-[24px] h-[24px] cursor-pointer" />
+              <IoStar className="text-gray-400 w-[24px] h-[24px] cursor-pointer" />
+              <IoStar className="text-gray-400 w-[24px] h-[24px] cursor-pointer" />
+            </div>
+          </div>
+          <div className="box2">
+            <p
+              className={`
+              font-[400] text-[14px] leading-[24px] 
+              `}
+            >
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+              enim ad minim veniam, quis nostrud exercitation ullamco
+              consectetur adipiscing elit, sed do eiusmod tempor
+            </p>
+          </div>
+        </div>
+        {/* ---------------------- */}
+        <div
+          className={`${classes.review_} flex flex-col gap-[24px] px-[36px] py-[8px]`}
+        >
+          <div className="">
+            <div className={`flex justify-between items-center`}>
+              <div className={`flex items-center gap-[16px]`}>
+                <div
+                  className={`w-[48px] h-[48px] rounded-full bg-black`}
+                ></div>
+                <p>Mahmoud Mokhtar</p>
+              </div>
+              <div className=" text-gray-500">
+                <p>{`${now.getDate()} ${now.toLocaleString("default", {
+                  month: "long",
+                })} ${now.getFullYear()}`}</p>
+              </div>
+            </div>
+            <div className="flex gap-[3px] pl-[40px]">
+              <IoStar className="text-gray-400 w-[24px] h-[24px] cursor-pointer" />
+              <IoStar className="text-gray-400 w-[24px] h-[24px] cursor-pointer" />
+              <IoStar className="text-gray-400 w-[24px] h-[24px] cursor-pointer" />
+              <IoStar className="text-gray-400 w-[24px] h-[24px] cursor-pointer" />
+              <IoStar className="text-gray-400 w-[24px] h-[24px] cursor-pointer" />
+            </div>
+          </div>
+          <div className="box2">
+            <p
+              className={`
+              font-[400] text-[14px] leading-[24px] 
+              `}
+            >
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+              enim ad minim veniam, quis nostrud exercitation ullamco
+              consectetur adipiscing elit, sed do eiusmod tempor
+            </p>
+          </div>
+        </div>
+        {/* ---------------------- */}
+      </div>
 
       {/* -------------------------Pagination--------------------------------- */}
       <div className="w-fit mx-auto mt-[50px] mb-[30px]">

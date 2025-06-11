@@ -24,21 +24,32 @@ const ProductDetails = () => {
   const [activeIndex, setActiveIndex] = useState(0); // 0 = first button by default
   const buttons = ["30", "50", "100", "200"];
   return (
-    <div className={`flex flex-col justify-center items-center gap-[56px]`}>
+    <div
+      className={`flex flex-col justify-center items-center gap-[56px]
+    max-sm:gap-[10px]
+    `}
+    >
       <div className="titile">
-        <h4>home / product</h4>
+        <h4
+          className={`
+          font-[700] text-[32px] leading-[40px] uppercase
+          `}
+        >
+          home / product
+        </h4>
       </div>
       <div
-        className={`w-full max-w-[1625px] h-[1064px] flex flex-wrap gap-[88px] justify-center `}
+        className={`w-full max-w-[1625px] h-[1064px] max-sm:h-full
+           flex flex-wrap gap-[88px] justify-center `}
       >
         <div
           className={`box1 
-              w-full max-w-[856px]  h-[1064px]  flex flex-col gap-[48px]
+              w-full max-w-[856px]  h-[1064px]  flex flex-col gap-[48px] max-sm:h-full
                     `}
         >
           <div
             className={`prod_box bg-gray-300
-                             w-full max-w-[856px] h-[856px]
+                             w-full max-w-[856px] h-[856px] max-sm:h-full
                             `}
           >
             {" "}
@@ -47,12 +58,12 @@ const ProductDetails = () => {
               width={300}
               height={300}
               alt="image"
-              className="w-full h-full"
+              className="w-full h-full max-w-full lg:w-[300px]"
             />
           </div>
           {/* ------------------------------------------------ */}
-          <div className="prod_imgs h-[160px]">
-            <div className="container relative">
+          <div className={`prod_imgs h-[160px] `}>
+            <div className={`container relative`}>
               <div className="relative">
                 <div>
                   {/* Custom navigation buttons */}
@@ -108,8 +119,8 @@ const ProductDetails = () => {
                   {[...Array(8)].map((_, idx) => (
                     <SwiperSlide>
                       <div
-                        className={`${classes.vid} flex flex-col gap-8 w-full max-w-[112px] h-[160px] relative
-                max-sm:h-full
+                        className={`${classes.vid} flex flex-col gap-8 relative 
+                w-full h-auto max-w-full lg:max-w-[112px] lg:h-[160px]  
                 `}
                       >
                         <Image
@@ -117,7 +128,9 @@ const ProductDetails = () => {
                           width={112}
                           height={160}
                           alt="image"
-                          className="w-full h-full"
+                          className={`w-full h-full lg:w-[112px]
+                            
+                            `}
                         />
                       </div>
                     </SwiperSlide>
@@ -130,7 +143,7 @@ const ProductDetails = () => {
         {/* ------------------------------------------------------------------- */}
         <div
           className={`box2 
-                    w-full max-w-[681px] h-[1044px]  mt-[20px]
+                    w-full max-w-[681px] h-[1044px]  mt-[20px] px-[10px]
                     `}
         >
           <div className="block_data flex flex-col gap-[24px]">
@@ -142,11 +155,16 @@ const ProductDetails = () => {
               >
                 Oils / Essential Oils
               </p>
-              <div className="specifications flex gap-[80px] justify-between">
+              <div
+                className={`specifications flex gap-[80px] justify-between 
+                max-sm:gap-[40px] max-sm:flex-col  max-sm:items-center
+                `}
+              >
                 <div className="block1 flex gap-[24px] items-center">
                   <h4
                     className={`
                 font-[700] text-[32px] leading-[40px] ${classes.txt1}
+                max-sm:text-[20px]
                 `}
                   >
                     Jojoba OIi 240ml
@@ -169,7 +187,7 @@ const ProductDetails = () => {
                   </button>
                 </div>
               </div>
-              <div className="rate flex gap-[8px]">
+              <div className={`rate flex gap-[8px] max-sm:justify-center `}>
                 <div className="flex gap-[3px]">
                   <button>
                     <IoStar className="text-gray-400 w-[24px] h-[24px] cursor-pointer" />
@@ -202,21 +220,33 @@ const ProductDetails = () => {
               </div>
               {/* ------------------------------------------------------- */}
 
-              <div className={`flex gap-[56px] items-center`}>
+              <div
+                className={`flex gap-[56px] items-center 
+                max-sm:gap-[20px] max-sm:justify-center
+                `}
+              >
                 <div className={`price flex gap-[16px]`}>
                   <span
-                    className={`font-[700] text-[20px] leading-[40px] tracking-[1px]`}
+                    className={`font-[700] text-[20px] leading-[40px] tracking-[1px]
+                      max-sm:text-[16px]
+                      `}
                   >
                     240.00EGP
                   </span>
                   <span
-                    className={`font-[700] text-[20px] leading-[40px] tracking-[1px] line-through ${classes.txt2}`}
+                    className={`font-[700] text-[20px] leading-[40px] tracking-[1px] line-through ${classes.txt2}
+                      max-sm:text-[16px]
+                    
+                    `}
                   >
                     640.00EGP
                   </span>
                 </div>
                 <span
-                  className={`font-[400] text-[18px] leading-[32px] tracking-[1px] ${classes.txt3}`}
+                  className={`font-[400] text-[18px] leading-[32px] tracking-[1px] ${classes.txt3}
+                      max-sm:text-[14px]
+                  
+                  `}
                 >
                   Save 400 EGP
                 </span>
@@ -253,17 +283,23 @@ const ProductDetails = () => {
                 <div
                   className={`${classes.btns} 
                   flex gap-[24px]
+                      max-sm:gap-[10px]
+                  
                   `}
                 >
                   {buttons.map((label, index) => (
                     <button
                       key={label}
                       onClick={() => setActiveIndex(index)}
-                      className={`w-[120px] h-[48px] rounded-2xl font-[700] text-[20px] leading-[40px] tracking-[1px]             ${
+                      className={`w-[120px] h-[48px] rounded-2xl font-[700] text-[20px] leading-[40px] tracking-[1px]    cursor-pointer       ${
                         activeIndex === index
                           ? classes.btn1
                           : "border-[1px] border-gray-400"
-                      }`}
+                      }
+                      
+
+                      
+                      `}
                     >
                       {label} Ml
                     </button>
@@ -271,7 +307,8 @@ const ProductDetails = () => {
                 </div>
 
                 <div
-                  className={`${classes.payment} mt-[50px] flex flex-col gap-[16px]`}
+                  className={`${classes.payment} mt-[50px] flex flex-col gap-[16px]
+                  `}
                 >
                   <p
                     className={`
@@ -281,11 +318,15 @@ const ProductDetails = () => {
                     payment options:
                   </p>
                   <div
-                    className={`pay border-[1px] rounded-md border-gray-400 w-full max-w-[669px] h-[56px] px-[56px] py-[8px] flex gap-[38px]`}
+                    className={`pay border-[1px] rounded-md border-gray-400 w-full max-w-[669px] h-[56px] px-[56px] py-[8px] flex gap-[38px]
+                      max-sm:px-[10px]
+                      `}
                   >
                     <label
                       className={`flex gap-[24px] justify-centerst items-center
       font-[700] text-[20px] leading-[40px] tracking-[1px] ${classes.radio}
+   max-sm:gap-[10px]  max-sm:text-[16px]  max-sm:leading-[25px] 
+
       `}
                       htmlFor="pay1"
                     >
@@ -299,11 +340,17 @@ const ProductDetails = () => {
                     </label>
                   </div>
                   <div
-                    className={`pay border-[1px] rounded-md border-gray-400 w-full max-w-[669px] h-[56px] px-[56px] py-[8px] flex items-center gap-[224px]`}
+                    className={`pay border-[1px] rounded-md border-gray-400 w-full max-w-[669px] h-[56px] 
+                      px-[56px] py-[8px] flex items-center gap-[224px]
+                      max-sm:px-[10px] max-sm:gap-[100px]
+                      
+                      `}
                   >
                     <label
-                      className={`flex gap-[24px] justify-centerst items-center
+                      className={`flex gap-[24px] justify-center items-center
       font-[700] text-[20px] leading-[40px] tracking-[1px] ${classes.radio}
+   max-sm:gap-[10px]  max-sm:text-[16px]  max-sm:leading-[25px] 
+
       `}
                       htmlFor="pay2"
                     >
@@ -316,7 +363,9 @@ const ProductDetails = () => {
                       Pay All
                     </label>
                     <p
-                      className={`font-[700] text-[20px] leading-[40px] tracking-[1px] ${classes.radio}`}
+                      className={`font-[700] text-[20px] leading-[40px] tracking-[1px] ${classes.radio}
+                       max-sm:text-[16px]
+                      `}
                     >
                       240.00 EGP
                     </p>
@@ -325,12 +374,16 @@ const ProductDetails = () => {
                 {/* ------------------------------------------------------- */}
 
                 <div
-                  className={`${classes.quantity} flex gap-[16px] py-[4px] my-[55px]`}
+                  className={`${classes.quantity} flex gap-[16px] py-[4px] my-[55px]  
+                  max-sm:flex-wrap max-sm: justify-center
+
+`}
                 >
                   <div
                     className={`btn_quantity flex justify-between items-center gap-[8px] 
                     rounded-2xl border-[1px] border-gray-400 w-[184px] h-[48px]
                     overflow-hidden bg-white
+                    max-sm:w-[150px]
                     `}
                   >
                     <button
@@ -358,6 +411,8 @@ const ProductDetails = () => {
                     className={`
                     h-[48px] w-[189px] flex justify-center items-center gap-[8px] text-white bg-black rounded-md cursor-pointer
                     font-[700] text-[16px] leading-[16px] tracking-[1px] 
+                    max-sm:w-[150px]
+
                     `}
                   >
                     <IoCartOutline className={`text-[20px]`} />
@@ -367,6 +422,7 @@ const ProductDetails = () => {
                     className={`
                     h-[48px] w-[265px] text-white ${classes.btn_bg} rounded-md cursor-pointer
                     font-[700] text-[16px] leading-[16px] tracking-[1px] 
+                    max-sm:w-full
                     `}
                   >
                     Buy Now

@@ -7,7 +7,7 @@ import React from "react";
 const page = ({ params }) => {
   return (
     <div>
-      <h2>Product Details for ID: {params.product_id}</h2>
+      {/* <h2>Product Details for ID: {params.product_id}</h2> */}
       <ProductDetails />
       {/* -----------------Reviews------------------------- */}
       <Reviews />

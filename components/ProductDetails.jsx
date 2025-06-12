@@ -58,7 +58,7 @@ const ProductDetails = () => {
               width={300}
               height={300}
               alt="image"
-              className="w-full h-full max-w-full lg:w-[300px]"
+              className="w-full h-full max-w-full"
             />
           </div>
           {/* ------------------------------------------------ */}

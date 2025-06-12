@@ -1,0 +1,38 @@
+.btn1 {
+  background-color: #56584b;
+}
+
+.discount {
+  color: #9d9f93;
+}
+.remove_btn {
+  color: #56584b;
+}
+
+.remove_btn:hover {
+  background-color: rgb(183, 13, 13);
+  color: white;
+}
+
+.spliter {
+  position: relative;
+}
+
+.spliter::after {
+  content: "";
+  position: absolute;
+  bottom: -30px;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 1px;
+  background-color: #8c8c8b80;
+}
+
+.checkbtn{
+    background-color: #353535;
+}
+
+.item,.subtotal{
+    color: #56584B;
+}

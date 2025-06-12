@@ -2,7 +2,7 @@ import classes from "../style/cart.module.css";
 import Image from "next/image";
 import { FiAlertCircle } from "react-icons/fi";
 import BestSellerProducts from "./BestSellerProducts";
-
+import Link from "next/link";
 const Cart = () => {
   return (
     <div
@@ -11,9 +11,13 @@ const Cart = () => {
     `}
     >
       <div className="title">
-        <h4 className={`
+        <h4
+          className={`
             font-[700] text-[32px] leading-[40px] uppercase text-center my-[50px]
-            `}>Your Cart</h4>
+            `}
+        >
+          Your Cart
+        </h4>
       </div>
       {/* ------------------------------------- */}
       <div
@@ -23,7 +27,6 @@ const Cart = () => {
     `}
       >
         <div className="box1 flex flex-col gap-[56px]">
-
           <div
             className={`product
             flex gap-[24px]
@@ -259,16 +262,18 @@ const Cart = () => {
               Final price including shipping and discounts appears at checkout.
             </p>
           </div>
-          <button
-            className={` ${classes.checkbtn}
-                            w-full max-w-[503px] h-[48px] text-white rounded-md
-                            `}
-          >
-            Check Out
-          </button>
+          <Link href="/payment" className="cursor-pointer">
+            <button
+              className={` ${classes.checkbtn}
+            w-full max-w-[503px] h-[48px] text-white rounded-md
+            `}
+            >
+              Check Out
+            </button>
+          </Link>
         </div>
       </div>
-      <BestSellerProducts/>
+      <BestSellerProducts />
     </div>
   );
 };

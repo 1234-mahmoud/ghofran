@@ -26,3 +26,39 @@ top: 50%;
 transform: translateY(-50%);
 left: 10px;
 }
+
+.spliter{
+    position: relative;
+}
+
+.spliter::after{
+    content: "";
+    position: absolute;
+    bottom:-18px;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 1px;
+    background-color:#ABADA3 ;
+}
+
+
+
+
+.counter{
+    position: absolute;
+    right: -8px;
+    top: -12px;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background-color: #353535;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn{
+    background-color: #353535;
+}

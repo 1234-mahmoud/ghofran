@@ -282,17 +282,123 @@ const Payment = () => {
             Pay Now
           </button>
         </form>
-        <div className={`my-[40px]
+        <div
+          className={`my-[40px]
           flex items-center gap-[24px] px-[24px] py-[16px]
                       font-[400] text-[14px] leading-[24px]
 
-          `}>
-          <a href="#" className={`border-b-[1px]`}>Refund and shipping policy</a>
-          <a href="#" className={`border-b-[1px]`}>Privacy policy</a>
+          `}
+        >
+          <a href="#" className={`border-b-[1px]`}>
+            Refund and shipping policy
+          </a>
+          <a href="#" className={`border-b-[1px]`}>
+            Privacy policy
+          </a>
         </div>
       </div>
       {/* ---------------------------------------------------------------------------- */}
-      <div className="order bg-gray-400 w-full max-w-[800px]">ffff</div>
+      <div
+        className={`order bg-gray-100 w-full max-w-[800px]
+        
+        `}
+      >
+        <div
+          className={`w-full max-w-[506px] mx-auto bg-amber-100
+          flex flex-col gap-[36px]
+          `}
+        >
+          <div className={`order_title ${classes.spliter}`}>
+            <p
+              className={`font-[700] text-[20px] leading-[40px] tracking-[1px] p-[4px] text-center`}
+            >
+              Order Summary
+            </p>
+          </div>
+          {/* ----------------------------------------------------- */}
+          <div
+            className={`order_box
+              relative flex gap-[24px] items-center py-[24px]
+              ${classes.spliter}
+            `}
+          >
+            <div
+              className={`prod
+              w-[112px] h-[92px] bg-gray-400 rounded-lg relative
+                          `}
+            >
+              <span className={` ${classes.counter}`}>1</span>
+            </div>
+            <div
+              className={`flex justify-between items-center w-full max-w-[371px]`}
+            >
+              <p
+                className={`
+                font-[700] text-[20px] leading-[40px] tracking-[1px]
+                                `}
+              >
+                Jojoba OIi 240ml
+              </p>
+              <p
+                className={`
+                font-[700] text-[14px] leading-[24px] tracking-[1px]
+                                `}
+              >
+                240.00 EGP
+              </p>
+            </div>
+          </div>
+          {/* ------------------------- */}
+          <div
+            className={`order_box
+              relative flex gap-[24px] items-center py-[24px]
+              ${classes.spliter}
+            `}
+          >
+            <div
+              className={`prod
+              w-[112px] h-[92px] bg-gray-400 rounded-lg relative
+                          `}
+            >
+              <span className={` ${classes.counter}`}>1</span>
+            </div>
+            <div
+              className={`flex justify-between items-center w-full max-w-[371px]`}
+            >
+              <p
+                className={`
+                font-[700] text-[20px] leading-[40px] tracking-[1px]
+                                `}
+              >
+                Jojoba OIi 240ml
+              </p>
+              <p
+                className={`
+                font-[700] text-[14px] leading-[24px] tracking-[1px]
+                                `}
+              >
+                240.00 EGP
+              </p>
+            </div>
+          </div>
+
+          {/* -------------------------------------------------------- */}
+          <div className={`dicount_box
+            flex gap-[24px] items-center
+            `}>
+            <input type="text" placeholder="discount code"
+            className={`w-full max-w-[381px] h-[48px] rounded-md indent-[40px]
+              bg-gray-200
+              `}
+            />
+            <button className={`w-[101px] h-[48px]
+              text-white font-[700] text-[16px] leading-[16px] tracking-[1px] ${classes.btn} rounded-md
+              `}>Apply</button>
+          </div>
+          <div className="shipping_info"></div>
+          <div className="total"></div>
+        </div>
+      </div>
     </div>
   );
 };

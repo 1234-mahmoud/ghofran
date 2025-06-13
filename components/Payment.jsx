@@ -4,7 +4,10 @@ import Link from "next/link";
 const Payment = () => {
   return (
     <div
-      className={`my-[50px] w-full max-w-[1484px] mx-auto flex gap-[36px] max-sm:flex-col`}
+      className={`my-[50px] w-full max-w-[1484px] mx-auto flex gap-[36px] max-sm:flex-col
+            max-sm:px-[10px]
+        
+        `}
     >
       <div className="contact w-full max-w-[648px]">
         <form action="" className={`flex flex-col gap-[64px]`}>
@@ -177,11 +180,14 @@ const Payment = () => {
                 <div
                   className={`
                 flex items-center gap-[86px] px-[24px] py-[8px] ${classes.input_2}
+                max-sm:flex-col max-sm:gap-[30px] 
+                
                 `}
                 >
                   <label
                     htmlFor="visa"
-                    className={`flex items-center gap-[8px]`}
+                    className={`flex items-center gap-[8px]
+                      `}
                   >
                     <input
                       type="radio"
@@ -299,12 +305,12 @@ const Payment = () => {
       </div>
       {/* ---------------------------------------------------------------------------- */}
       <div
-        className={`order bg-gray-100 w-full max-w-[800px]
+        className={`order  ${classes.input_2} w-full max-w-[800px]
         
         `}
       >
         <div
-          className={`w-full max-w-[506px] mx-auto bg-amber-100
+          className={`w-full max-w-[506px] mx-auto 
           flex flex-col gap-[36px]
           `}
         >
@@ -383,20 +389,117 @@ const Payment = () => {
           </div>
 
           {/* -------------------------------------------------------- */}
-          <div className={`dicount_box
-            flex gap-[24px] items-center
-            `}>
-            <input type="text" placeholder="discount code"
-            className={`w-full max-w-[381px] h-[48px] rounded-md indent-[40px]
+          <div
+            className={`dicount_box
+            flex gap-[24px] items-center ${classes.spliter}
+            `}
+          >
+            <input
+              type="text"
+              placeholder="discount code"
+              className={`w-full max-w-[381px] h-[48px] rounded-md indent-[40px]
               bg-gray-200
               `}
             />
-            <button className={`w-[101px] h-[48px]
+            <button
+              className={`w-[101px] h-[48px]
               text-white font-[700] text-[16px] leading-[16px] tracking-[1px] ${classes.btn} rounded-md
-              `}>Apply</button>
+              `}
+            >
+              Apply
+            </button>
           </div>
-          <div className="shipping_info"></div>
-          <div className="total"></div>
+          <div
+            className={`shipping_info
+            flex flex-col gap-[8px] py-[10px] ${classes.spliter}
+            `}
+          >
+            <p
+              className={`
+              font-[700] text-[20px] leading-[40px] tracking-[1px]
+              `}
+            >
+              3 Items
+            </p>
+            <div className={`flex gap-[284px] items-center
+              max-sm:gap-[120px]
+              `}>
+              <p
+                className={`
+              font-[700] text-[20px] leading-[40px] tracking-[1px]
+              `}
+              >
+                Subtotal
+              </p>
+              <p
+                className={`
+              font-[700] text-[14px] leading-[24px] tracking-[1px]
+              `}
+              >
+                720.00 EGP
+              </p>
+            </div>
+
+            <div className={`flex gap-[273px] items-center
+               max-sm:gap-[110px]
+              `}>
+              <p
+                className={`
+              font-[700] text-[20px] leading-[40px] tracking-[1px]
+              `}
+              >
+                Discount
+              </p>
+              <p
+                className={`
+              font-[700] text-[14px] leading-[24px] tracking-[1px] text-gray-300
+              `}
+              >
+                -100.00 EGP
+              </p>
+            </div>
+
+            <div className={`flex gap-[284px] items-center
+               max-sm:gap-[120px]
+              `}>
+              <p
+                className={`
+              font-[700] text-[20px] leading-[40px] tracking-[1px]
+              `}
+              >
+                Shipping
+              </p>
+              <p
+                className={`
+              font-[700] text-[14px] leading-[24px] tracking-[1px]
+              `}
+              >
+                35.00 EGP
+              </p>
+            </div>
+          </div>
+          <div
+            className={`total
+             flex justify-between items-center
+              font-[700] text-[20px] leading-[40px] tracking-[1px]
+              
+            `}
+          >
+            <p
+              className={`
+              font-[700] text-[20px] leading-[40px] tracking-[1px]
+              `}
+            >
+              Total
+            </p>
+            <p
+              className={`
+              font-[700] text-[20px] leading-[40px] tracking-[1px]
+              `}
+            >
+              675.00 EGP
+            </p>
+          </div>
         </div>
       </div>
     </div>

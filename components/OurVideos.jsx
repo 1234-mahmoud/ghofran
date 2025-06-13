@@ -10,7 +10,7 @@ import Image from "next/image";
 import classes from "../style/our-videos.module.css";
 import Link from "next/link";
 import { MdOutlineSlowMotionVideo } from "react-icons/md";
-const OurVideos = () => {
+const OurVideos = ({title}) => {
   const prevRef = useRef(null);
   const nextRef = useRef(null);
 
@@ -35,7 +35,7 @@ const OurVideos = () => {
               <h1
                 className={`font-[700] text-[56px] leading-[64px] text-center`}
               >
-                Our Videos
+               {title}
               </h1>
             </div>
             <button ref={nextRef} className={classes.navBtn}>

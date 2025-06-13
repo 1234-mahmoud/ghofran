@@ -12,9 +12,9 @@ const page = ({ params }) => {
       {/* -----------------Reviews------------------------- */}
       <Reviews />
       {/* ----------------------Related Products--------------------------- */}
-      <BestSellerProducts title="Explore Related Products" />
+      <BestSellerProducts title="Explore Related Products" style="text-center"/>
       {/* ----------------------Hair Products Reviews--------------------------- */}
-      <OurVideos />
+      <OurVideos title='Hair Products Reviews'/>
     </div>
   );
 };

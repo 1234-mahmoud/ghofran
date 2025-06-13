@@ -273,7 +273,8 @@ const Cart = () => {
           </Link>
         </div>
       </div>
-      <BestSellerProducts />
+      <BestSellerProducts title='Explore Recently Viewed Products' style='text-center'/>
+     
     </div>
   );
 };

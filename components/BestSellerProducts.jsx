@@ -9,7 +9,7 @@ import { AiOutlineLeft, AiOutlineRight, AiFillStar } from "react-icons/ai";
 import Image from "next/image";
 import classes from "../style/best-seller.module.css";
 import Link from "next/link";
-const BestSellerProducts = () => {
+const BestSellerProducts = ({title,style}) => {
   const prevRef = useRef(null);
   const nextRef = useRef(null);
 
@@ -20,9 +20,8 @@ const BestSellerProducts = () => {
           flex justify-between items-center pb-[20px]
           `}>
 
-        <div className="title">
-          
-          <h1 className={`font-[700] text-[40px] leading-[64px]`}>Best Seller</h1>
+        <div className={`title w-full ${style}`}>
+          <h1 className={`font-[700] text-[40px] leading-[64px]`}>{title}</h1>
         </div>
         {/* Custom navigation buttons */}
         <div className={classes.navContainer}>

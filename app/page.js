@@ -12,8 +12,8 @@ export default function Home() {
     <div className="">
           <Slider/>
           <TopCategories/>
-          <BestSellerProducts/>
-          <OurVideos/>
+          <BestSellerProducts title='Best Seller'/>
+          <OurVideos title='Our Videos'/>
           <Year/>
           <Customers/>
           <NewArrivals/>

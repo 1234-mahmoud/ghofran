@@ -9,24 +9,24 @@ const Footer = () => {
   return (
     <div
       className={`
-    w-full h-[486px] 
-   
-    flex flex-col justify-between
-    mt-[150px]
+    w-full h-[486px] flex flex-col justify-between mt-[150px] relative bottom-0
     max-sm:h-full  
-    relative bottom-0
+    max-lg:h-full
+    max-xl:h-full
     `}
     >
       <div
-        className={`${classes.top_footer}
-        w-full h-[322px]
-        max-sm:h-full
+        className={`w-full h-[322px]
     px-[140px]
-max-sm:px-[20px]
+max-xl:px-[20px]
+flex gap-[89px] 
+max-xl:flex-wrap max-xl:h-full max-xl:mb-[20px]
+
         `}
       >
         <div
           className={`contact 
+            w-[194px]
             flex flex-col items-center gap-[24px]
             `}
         >
@@ -48,6 +48,7 @@ max-sm:px-[20px]
         {/* -------- */}
         <div
           className={`quick_links 
+            w-[194px]
              flex flex-col gap-[20px]
         max-sm:pl-[10px]
 
@@ -80,6 +81,7 @@ max-sm:px-[20px]
 
         <div
           className={`cat_links 
+            w-[123px]
              flex flex-col gap-[20px]
         max-sm:pl-[10px]
             
@@ -130,6 +132,7 @@ max-sm:px-[20px]
 
         <div
           className={`payment 
+            w-[302px]
              flex flex-col gap-[24px]
         max-sm:pl-[10px]
             
@@ -175,6 +178,7 @@ max-sm:px-[20px]
 
         <div
           className={`subscribtion 
+            w-full max-w-[467px]
              flex flex-col gap-[24px]
         max-sm:pl-[10px]
             
@@ -193,7 +197,7 @@ max-sm:px-[20px]
             `}>Subscribe</button>
         </div>
       </div>
-      {/* --------------------------------------- */}
+      {/* ----------------------------------------------------------------------------- */}
       <div
         className={`bottom_footer
      bg-black  w-full h-[48px] max-h-full text-white flex items-center pl-[20px]

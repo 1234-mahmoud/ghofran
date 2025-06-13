@@ -230,10 +230,11 @@ const Payment = () => {
                       height={24}
                     />
                     <Image
-                      src="/instapay.png"
+                      src="/instapay.svg"
                       alt="electronic payment"
-                      width={38}
+                      width={68}
                       height={24}
+                      style={{marginLeft:'-20px'}}
                     />
                   </div>
                 </div>

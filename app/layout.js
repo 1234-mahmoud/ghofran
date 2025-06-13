@@ -32,7 +32,7 @@ export default function RootLayout({ children }) {
       lang="en"
       className={`${geistSans.variable} ${geistMono.variable} ${poppins.variable}`}
     >
-      <body className="antialiased font-sans">
+      <body className="antialiased font-sans relative ">
         <AppProvider>
           <Header />
           {children}

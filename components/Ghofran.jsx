@@ -1,27 +1,37 @@
 import classes from "../style/ghofran.module.css";
+
 const Ghofran = () => {
   return (
-    <div className="my-[200px] flex flex-col gap-[56px] justify-center items-center">
-      <div className={` flex flex-col justify-center items-center gap-[24px] w-full max-w-[1135px]`}>
-        <h3 className={`font-[700] text-[40px] leading-[64px]`}>Ghofran — Made Just for You</h3>
-        <p className={`${classes.gofran_text} font-[700] text-[20px] leading-[40px] tracking-[1px] text-center px-14 py-4`}>
+    <div className="my-24 md:my-[200px] flex flex-col gap-14 md:gap-[56px] justify-center items-center px-4">
+      {/* Text Content */}
+      <div className="flex flex-col justify-center items-center gap-6 md:gap-[24px] w-full max-w-[1135px] text-center">
+        <h3 className="font-bold text-3xl md:text-[40px] leading-tight md:leading-[64px]">
+          Ghofran — Made Just for You
+        </h3>
+        <p className={`${classes.gofran_text} font-bold text-base md:text-[20px] leading-relaxed md:leading-[40px] tracking-wide px-4 md:px-14 py-4`}>
           At Ghofran, we blend elegance, tradition, and modern style to bring
           you carefully selected pieces that reflect beauty, comfort, and
           individuality. Every product is chosen with love to fit your lifestyle
           and elevate your everyday look.
         </p>
-        <button className={`font-[700] text-[16px] leading-[16px] tracking-[1px] text-white w-[360px] h-[48px] bg-black
-            rounded-md
-            `}>Shop Now and Embrace Your Style</button>
+        <button className="font-bold text-sm md:text-[16px] leading-none tracking-wide text-white w-full max-w-[360px] h-12 bg-black rounded-md">
+          Shop Now and Embrace Your Style
+        </button>
       </div>
-      {/* ---------------- */}
-      <div className={`${classes.blocks} flex gap-[16px] w-full max-w-[1744px] mx-auto max-sm:flex-col`}>
-        <div className={`${classes.box1} bg-gray-400 w-full max-w[864px] h-[864px]`}></div>
-        <div className={`${classes.box2}  w-full max-w[864px] h-[864px] flex flex-wrap gap-[16px]`}>
-            <div className={`${classes.child_box} w-full max-w-[424px] h-[424px] bg-gray-400`}></div>
-            <div className={`${classes.child_box} w-full max-w-[424px] h-[424px] bg-gray-400`}></div>
-            <div className={`${classes.child_box} w-full max-w-[424px] h-[424px] bg-gray-400`}></div>
-            <div className={`${classes.child_box} w-full max-w-[424px] h-[424px] bg-gray-400`}></div>
+
+      {/* Image Blocks */}
+      <div className={`${classes.blocks} flex flex-col xl:flex-row gap-4 w-full max-w-[1744px] px-4`}>
+        {/* Left Large Box */}
+        <div className={`${classes.box1} bg-gray-400 w-full xl:max-w-[864px] h-[300px] sm:h-[500px] xl:h-[864px]`}></div>
+
+        {/* Right Grid Boxes */}
+        <div className={`${classes.box2} w-full xl:max-w-[864px] flex flex-wrap gap-4`}>
+          {[1, 2, 3, 4].map((_, index) => (
+            <div
+              key={index}
+              className={`${classes.child_box} bg-gray-400 w-full sm:w-[48%] h-[200px] sm:h-[300px] xl:h-[424px]`}
+            ></div>
+          ))}
         </div>
       </div>
     </div>

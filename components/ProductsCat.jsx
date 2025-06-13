@@ -35,12 +35,8 @@ export default function ProductsCat() {
        <div 
        ref={sidebarRef_2}
        className={`mt-[50px]
-       max-sm:p-[10px]
-        translate-x-0 max-sm:transition-transform max-sm:duration-[1000ms] max-sm:ease-in-out
-        max-sm:w-[200px] max-sm:absolute 
-        max-sm:top-[200px] max-sm:right-0 max-sm:h-auto max-sm:z-20
-        max-sm:text-white
-      ${show ? "max-sm:translate-x-0" : "max-sm:translate-x-[100%]"}
+      
+       
        `}>
             <h4 className="font-[700] leading-[40px] text-[2rem] uppercase text-center 
             max-sm:text-[1.3rem]

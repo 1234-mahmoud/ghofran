@@ -21,6 +21,7 @@ const BestSellerProducts = () => {
           `}>
 
         <div className="title">
+          
           <h1 className={`font-[700] text-[40px] leading-[64px]`}>Best Seller</h1>
         </div>
         {/* Custom navigation buttons */}

@@ -8,7 +8,7 @@ import { BsFacebook } from "react-icons/bs";
 import classes from "../style/Header.module.css";
 import Link from "next/link";
 import { ContextProvider } from "context/AppProvider";
-import ProductsCat from "./ProductsCat";
+
 import Image from "next/image";
 export default function Header() {
   const { show,
@@ -80,6 +80,7 @@ export default function Header() {
             <option value="en">English</option>
           </select>
         </div>
+        
       </div>
 
       {/* Utilities header */}
@@ -134,7 +135,7 @@ export default function Header() {
       
         `}
       >
-        {show && <ProductsCat/>}
+      
         <nav
           className={`
           `}
@@ -199,6 +200,86 @@ export default function Header() {
           >
             Contact US
           </Link>
+
+            {/* ------------------------------------------------------------------------------- */}
+
+   <div 
+      
+       className={`mt-[100px]
+        hidden
+        max-sm:block  max-sm:p-[10px]
+        max-sm:w-[200px] max-sm:absolute 
+        max-sm:top-[200px] max-sm:right-0 max-sm:h-auto max-sm:z-20
+       
+     
+       `}>
+           
+            <div
+              className={` h-[112px] flex justify-around gap-[430px] items-center 
+            max-sm:h-full max-sm:gap-[10px] max-sm:flex-col 
+                ${classes.nav_border}`}
+            >
+              <nav className={`products_catogries flex gap-[48px]
+        max-sm:flex-col max-sm:gap-[10px] max-sm:justify-center max-sm:items-center
+                `}>
+                <Link
+                  className={`font-[700] text-[1.25rem] pb-3 
+                    
+                   `}
+                  href="/"
+                >
+                  All Products
+                </Link>
+                <Link
+                  className={`font-[700] text-[1.25rem] pb-3 
+                    
+                  `}
+                  href="./hair_products"
+                >
+                  Hair Products
+                </Link>
+                <Link
+                  className={`font-[700] text-[1.25rem] pb-3 
+                    
+                   `}
+                  href="/face_products"
+                >
+                  Face Products
+                </Link>
+                <Link
+                  className={`font-[700] text-[1.25rem] pb-3 
+                    
+                   `}
+                  href="/body_products"
+                >
+                  Body Products
+                </Link>
+                <Link
+                  className={`font-[700] text-[1.25rem] pb-3 
+                    
+                    `}
+                  href="/natural_oils_products"
+                >
+                  Natural Oils
+                </Link>
+              </nav>
+              <select
+                name="category_filter"
+                id=""
+                defaultValue="Sort By"
+                className={`font-[700] text-[1.25rem]`}
+              >
+                <option value="Sort By">Sort By</option>
+                <option value="cat1">cat1</option>
+                <option value="cat2">cat2</option>
+                <option value="cat3">cat3</option>
+                <option value="cat4">cat4</option>
+              </select>
+            </div>
+          </div>
+
+
+      {/* ------------------------------------------------------------------------------------------- */}
         </nav>
       </header>
 
@@ -252,6 +333,7 @@ export default function Header() {
           </div>
         </div>
       </div>
+    
     </div>
   );
 }

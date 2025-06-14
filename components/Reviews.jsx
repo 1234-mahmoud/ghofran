@@ -63,14 +63,15 @@ const Reviews = ({ params }) => {
       </nav> */}
       {/* -------------------------content--------------------------------- */}
       <div
-        className={`flex items-center gap-[64px] flex-wrap w-full max-w-[1309px] h-[248px] mx-auto my-[100px] 
-          max-sm:h-full max-sm:mx-1 max-sm:mt-[200px] max-sm:justify-center
-          
+        className={`flex items-center gap-[64px] w-full  max-w-[1309px] h-[248px] mx-auto my-[100px] 
+          max-sm:mx-1 max-sm:mt-[200px] max-sm:justify-center 
+          max-2xl:h-full max-md:flex-col max-xl:px-2
+         
           `}
       >
         <div className={`${classes.rev} flex flex-col gap-[36px]
                 max-sm:gap-[20px] 
-                
+                max-xl:mx-auto
                 `}>
           <p
             className={` 
@@ -171,7 +172,10 @@ const Reviews = ({ params }) => {
         <button
           className={`w-full max-w-[522px] h-[48px] text-white rounded-md ${classes.rev_btn}
       font-[700] text-[16px] leading-[16px] tracking-[1px] cursor-pointer 
-      max-sm:w-[300px]
+      max-md:w-[300px]
+      max-xl:w-[400px]
+      max-xl:mx-auto
+
       `}
         >
           write review

@@ -32,24 +32,30 @@ const ProductDetails = () => {
       <div className="titile">
         <h4
           className={`
-          font-[700] text-[32px] leading-[40px] uppercase
+          font-[700] text-[32px] leading-[40px] uppercase mt-[30px]
           `}
         >
           home / product
         </h4>
       </div>
       <div
-        className={`w-full max-w-[1625px] h-[1064px] max-sm:h-full
-           flex flex-wrap gap-[88px] justify-center `}
+        className={`w-full flex  gap-[88px] justify-center max-w-[1625px] h-[1064px] 
+          max-lg:flex-col 
+          max-xl:h-full max-xl:gap-[40px]
+           `}
       >
         <div
           className={`box1 
-              w-full max-w-[856px]  h-[1064px]  flex flex-col gap-[48px] max-sm:h-full
+              w-full max-w-[856px]  h-[1064px]  flex flex-col gap-[48px] max-xl:h-full
+              max-lg:w-[700px] max-lg:mx-auto
+              max-xl:w-[520px]
+              max-2xl:w-[600px] 
+
                     `}
         >
           <div
             className={`prod_box bg-gray-300
-                             w-full max-w-[856px] h-[856px] max-sm:h-full
+                             w-full max-w-[856px] h-[856px] max-xl:h-full
                             `}
           >
             {" "}
@@ -144,6 +150,10 @@ const ProductDetails = () => {
         <div
           className={`box2 
                     w-full max-w-[681px] h-[1044px]  mt-[20px] px-[10px]
+                    max-lg:mx-auto
+                    max-lg:w-[850px]
+                    max-xl:w-[500px] max-xl:h-full max-xl:mt-0
+                    max-2xl:w-[600px] 
                     `}
         >
           <div className="block_data flex flex-col gap-[24px]">
@@ -157,14 +167,16 @@ const ProductDetails = () => {
               </p>
               <div
                 className={`specifications flex gap-[80px] justify-between 
-                max-sm:gap-[40px] max-sm:flex-col  max-sm:items-center
+                max-xl:gap-0 max-sm:flex-col  max-sm:items-center
+                
                 `}
               >
                 <div className="block1 flex gap-[24px] items-center">
                   <h4
                     className={`
                 font-[700] text-[32px] leading-[40px] ${classes.txt1}
-                max-sm:text-[20px]
+                max-xl:text-[20px]
+                max-xl:whitespace-nowrap
                 `}
                   >
                     Jojoba OIi 240ml
@@ -319,13 +331,14 @@ const ProductDetails = () => {
                   </p>
                   <div
                     className={`pay border-[1px] rounded-md border-gray-400 w-full max-w-[669px] h-[56px] px-[56px] py-[8px] flex gap-[38px]
-                      max-sm:px-[10px]
+                      max-xl:px-[10px]
                       `}
                   >
                     <label
                       className={`flex gap-[24px] justify-centerst items-center
       font-[700] text-[20px] leading-[40px] tracking-[1px] ${classes.radio}
    max-sm:gap-[10px]  max-sm:text-[16px]  max-sm:leading-[25px] 
+   
 
       `}
                       htmlFor="pay1"
@@ -342,7 +355,7 @@ const ProductDetails = () => {
                   <div
                     className={`pay border-[1px] rounded-md border-gray-400 w-full max-w-[669px] h-[56px] 
                       px-[56px] py-[8px] flex items-center gap-[224px]
-                      max-sm:px-[10px] max-sm:gap-[100px]
+                      max-xl:px-[10px] max-sm:gap-[100px]
                       
                       `}
                   >

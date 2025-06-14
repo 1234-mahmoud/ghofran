@@ -11,7 +11,7 @@ const Footer = () => {
       className={`
     w-full h-[486px] flex flex-col justify-between mt-[150px] relative bottom-0
    
-    max-xl:h-full
+    max-xl:h-full 
     `}
     >
       <div
@@ -20,7 +20,8 @@ const Footer = () => {
 max-xl:px-[20px]
 flex gap-[89px] 
 max-xl:flex-wrap max-xl:h-full max-xl:mb-[20px]
-
+max-xl:justify-center 
+max-xl:mt-[-50px]
         `}
       >
         <div

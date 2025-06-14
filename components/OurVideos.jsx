@@ -90,7 +90,7 @@ const OurVideos = ({title}) => {
           {[...Array(8)].map((_, idx) => (
             <SwiperSlide key={idx} className="flex justify-center gap-[24px]">
               <div className={`${classes.vid} flex flex-col gap-8 w-full max-w-[400px] h-[700px] relative
-                max-sm:h-full
+                max-xl:h-[350px]
                 `}>
                 <Image
                   src="/pic.jpg"

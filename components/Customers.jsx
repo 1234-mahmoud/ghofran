@@ -14,7 +14,7 @@ const Customers = () => {
   const nextRef = useRef(null);
 
   return (
-    <div className={`bg-green-400 relative
+    <div className={` relative
     max-lg:mt-[150px]
     `}>
       {/* Title Section */}

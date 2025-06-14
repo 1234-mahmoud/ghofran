@@ -19,6 +19,7 @@ const TopCategories = () => {
       <h1
         className={`
                 font-[700] text-[56px] leading-[4rem] text-center
+                max-lg:text-[35px]
                 `}
       >
         Top Categories

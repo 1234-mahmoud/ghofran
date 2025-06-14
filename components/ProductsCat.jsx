@@ -1,41 +1,16 @@
 'use client'
-import React, { useContext,useRef,useEffect } from 'react'
 import { usePathname } from "next/navigation";
 import classes from "../style/products.module.css";
 import Link from 'next/link';
-import { ContextProvider } from 'context/AppProvider';
 export default function ProductsCat() {
       const path = usePathname();
-      const {show,setShow} = useContext(ContextProvider)
-
-      const sidebarRef_2 = useRef();
       
-        useEffect(() => {
-          function handleClickOutside(event) {
-            if (sidebarRef_2.current && !sidebarRef_2.current.contains(event.target)) {
-              setShow(false); // Hide sidebar
-            }
-          }
-      
-          if (show) {
-            document.addEventListener("mousedown", handleClickOutside);
-          } else {
-            document.removeEventListener("mousedown", handleClickOutside);
-          }
-      
-          return () => {
-            document.removeEventListener("mousedown", handleClickOutside);
-          };
-        }, [show]);
-      
-
-
 
   return (
        <div 
-       ref={sidebarRef_2}
-       className={`mt-[50px]
       
+       className={`mt-[50px]
+      max-lg:hidden
        
        `}>
             <h4 className="font-[700] leading-[40px] text-[2rem] uppercase text-center 
@@ -58,7 +33,7 @@ export default function ProductsCat() {
                     ${
                     path.startsWith("/") ? classes.active : undefined
                   }`}
-                  href="/"
+                  href="/all_products"
                 >
                   All Products
                 </Link>

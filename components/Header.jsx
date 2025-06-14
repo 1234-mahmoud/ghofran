@@ -149,10 +149,10 @@ export default function Header() {
             max-xl:text-[1.1rem] 
             `} href="/contact">Contact US</Link>
 
-          <div className={`mt-[110px] hidden max-lg:block max-lg:p-[10px] max-lg:w-[200px] max-lg:absolute max-lg:top-[200px] max-lg:right-0 max-lg:h-auto max-lg:z-20 max-sm:block max-sm:p-[10px] max-sm:w-[200px] max-sm:absolute max-sm:top-[200px] max-sm:right-0 max-sm:h-auto max-sm:z-20`}>
-            <div className={`h-[112px] flex justify-around gap-[430px] items-center max-lg:h-full max-lg:gap-[10px] max-lg:flex-col max-sm:h-full max-sm:gap-[10px] max-sm:flex-col ${classes.nav_border}`}>
+          <div className={`mt-[135px] hidden max-lg:block max-lg:p-[10px] max-lg:w-[200px] max-lg:absolute max-lg:top-[200px] max-lg:right-0 max-lg:h-auto max-lg:z-20 max-sm:block max-sm:p-[10px] max-sm:w-[200px] max-sm:absolute max-sm:top-[200px] max-sm:right-0 max-sm:h-auto max-sm:z-20`}>
+            <div className={`h-[112px] flex justify-around gap-[430px] items-center max-lg:h-full max-lg:gap-[30px] max-lg:flex-col max-sm:h-full max-sm:gap-[10px] max-sm:flex-col ${classes.nav_border}`}>
               <nav className={`products_catogries flex gap-[48px] max-lg:flex-col max-lg:gap-[10px] max-lg:justify-center max-lg:items-center max-sm:flex-col max-sm:gap-[10px] max-sm:justify-center max-sm:items-center`}>
-                <Link className={`font-[700] text-[1.25rem] pb-3 max-lg:text-[1.1rem] max-sm:text-[1rem]`} href="/">All Products</Link>
+                <Link className={`font-[700] text-[1.25rem] pb-3 max-lg:text-[1.1rem] max-sm:text-[1rem]`} href="/all_products">All Products</Link>
                 <Link className={`font-[700] text-[1.25rem] pb-3 max-lg:text-[1.1rem] max-sm:text-[1rem]`} href="./hair_products">Hair Products</Link>
                 <Link className={`font-[700] text-[1.25rem] pb-3 max-lg:text-[1.1rem] max-sm:text-[1rem]`} href="/face_products">Face Products</Link>
                 <Link className={`font-[700] text-[1.25rem] pb-3 max-lg:text-[1.1rem] max-sm:text-[1rem]`} href="/body_products">Body Products</Link>

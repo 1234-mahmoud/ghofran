@@ -21,7 +21,9 @@ const BestSellerProducts = ({title,style}) => {
           `}>
 
         <div className={`title w-full ${style}`}>
-          <h1 className={`font-[700] text-[40px] leading-[64px]`}>{title}</h1>
+          <h1 className={`font-[700] text-[40px] leading-[64px]
+            max-lg:text-[32px]
+            `}>{title}</h1>
         </div>
         {/* Custom navigation buttons */}
         <div className={classes.navContainer}>

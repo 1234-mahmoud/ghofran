@@ -12,7 +12,9 @@ export default function Products() {
       <ProductsCat />
       {/* ------------------------------------------------------------- */}
       <div
-        className={`${classes.products} mt-[100px]  flex gap-[56px] flex-wrap justify-center items-center `}
+        className={`${classes.products} mt-[100px]  flex gap-[56px] flex-wrap justify-center items-center 
+        max-lg:px-[10px]
+        `}
       >
         <div
           className={`product flex flex-col gap-8 w-full max-w-[392px] h-[424px] `}

@@ -21,7 +21,9 @@ const NewArrivals = () => {
           `}>
 
         <div className="title">
-          <h1 className={`font-[700] text-[40px] leading-[64px]`}>New Arrivals</h1>
+          <h1 className={`font-[700] text-[40px] leading-[64px]
+            max-lg:text-[30px]
+            `}>New Arrivals</h1>
         </div>
         {/* Custom navigation buttons */}
         <div className={classes.navContainer}>

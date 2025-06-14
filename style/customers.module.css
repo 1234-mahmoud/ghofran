@@ -1,11 +1,18 @@
 .navContainer {
   position: absolute;
   right: 0;
-  top: calc(50% + (100% - 540px) / 2);
-  transform: translateY(-50%);
+  top: calc(50% + (100% + 544px) / 2);
+  transform: translateY(50%);
   z-index: 10;
   display: flex;
   gap: 8px;
+}
+
+@media (max-width:1024px) {
+  .navContainer{
+  top: calc(50% + (100% + 340px) / 2);
+    
+  }
 }
 
 .navBtn {

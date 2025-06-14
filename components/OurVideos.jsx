@@ -26,6 +26,7 @@ const OurVideos = ({title}) => {
           <div
             className={`${classes.navContainer} 
           w-full justify-between items-center  px-[40px] mb-[100px]
+          max-lg:px-[10px] max-lg:mb-[50px]
           `}
           >
             <button ref={prevRef} className={classes.navBtn}>
@@ -33,7 +34,10 @@ const OurVideos = ({title}) => {
             </button>
             <div className="title ">
               <h1
-                className={`font-[700] text-[56px] leading-[64px] text-center`}
+                className={`font-[700] text-[56px] leading-[64px] text-center
+                  max-sm:text-[28px]
+                  max-lg:text-[35px]
+                  `}
               >
                {title}
               </h1>

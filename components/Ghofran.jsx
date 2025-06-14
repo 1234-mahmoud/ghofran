@@ -2,7 +2,9 @@ import classes from "../style/ghofran.module.css";
 
 const Ghofran = () => {
   return (
-    <div className="my-24 md:my-[200px] flex flex-col gap-14 md:gap-[56px] justify-center items-center px-4">
+    <div className={`my-24 md:my-[200px] flex flex-col gap-14 md:gap-[56px] justify-center items-center px-4
+    max-lg:my-[150px]
+    `}>
       {/* Text Content */}
       <div className="flex flex-col justify-center items-center gap-6 md:gap-[24px] w-full max-w-[1135px] text-center">
         <h3 className="font-bold text-3xl md:text-[40px] leading-tight md:leading-[64px]">

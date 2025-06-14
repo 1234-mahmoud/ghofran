@@ -28,7 +28,8 @@ export default function Slider() {
         modules={[Pagination, Autoplay]}
         className={`${classes.swiperWrapper} mySwiper 
             w-full max-w-[90%] mt-[50px] mb-[100px] mx-auto h-[540px] relative
-            rounded-md
+            rounded-md bg-gray-300 
+            max-lg:h-[340px]
         `}
       >
         <SwiperSlide>

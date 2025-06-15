@@ -4,13 +4,17 @@ import Link from "next/link";
 const Payment = () => {
   return (
     <div
-      className={`my-[50px] w-full max-w-[1484px] mx-auto flex gap-[36px] max-sm:flex-col
-            max-sm:px-[10px]
+      className={`my-[50px] w-full max-w-[1484px] mx-auto flex gap-[36px] 
+        max-lg:flex-col max-sm:lg-[10px]  max-lg:items-center
+       
         
         `}
     >
-      <div className="contact w-full max-w-[648px]">
-        <form action="" className={`flex flex-col gap-[64px]`}>
+      <div className={`contact w-full max-w-[648px]
+         max-xl:w-[500px]
+        `}>
+        <form action="" className={`flex flex-col gap-[64px]
+          `}>
           <div
             className={`contact_ 
             flex flex-col gap-[8px]
@@ -307,6 +311,7 @@ const Payment = () => {
       {/* ---------------------------------------------------------------------------- */}
       <div
         className={`order  ${classes.input_2} w-full max-w-[800px]
+        max-xl:w-[600px]
         
         `}
       >

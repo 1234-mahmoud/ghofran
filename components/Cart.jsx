@@ -22,16 +22,20 @@ const Cart = () => {
       {/* ------------------------------------- */}
       <div
         className={`box my-[100px]
-    w-full max-w-[1614px] h-[432px] max-sm:h-full mx-auto flex gap-[120px]
-     max-sm:gap-[0px] max-sm:px-2  max-sm:flex-col
+    w-full max-w-[1614px] h-[432px] max-xl:h-full mx-auto flex gap-[120px]
+     max-sm:gap-[0px] max-sm:px-2  max-xl:flex-col max-xl:px-3
     `}
       >
-        <div className="box1 flex flex-col gap-[56px]">
+        <div className={`box1 flex flex-col gap-[56px]
+          
+          `}>
           <div
             className={`product
             flex gap-[24px]
                 ${classes.spliter}
-                max-sm:flex-col max-sm:justify-center 
+                max-sm:justify-center 
+                max-md:flex-col 
+                max-lg:items-center
             `}
           >
             <Image
@@ -43,8 +47,9 @@ const Cart = () => {
             />
             <div
               className={`prod_info
-                w-[645px] h-[162px] max-sm:h-full flex gap-[24px] px-[24px]
-                max-sm:flex-col max-sm:w-full max-sm:px-[10px]
+                w-[645px] h-[162px] max-lg:h-full flex gap-[24px] px-[24px]
+                max-lg:flex-col max-lg:w-full max-lg:px-[10px] 
+                
 
                 `}
             >
@@ -60,7 +65,10 @@ const Cart = () => {
                   Jojoba OIi 240ml
                 </p>
                 <div
-                  className={`price flex justify-between items-center gap-[24px] max-sm:flex-wrap max-sm:justify-around`}
+                  className={`price flex justify-between items-center gap-[24px]  
+                    max-md:justify-around max-md:flex-wrap
+                    
+                    `}
                 >
                   <span
                     className={`price_after_discount font-[700] leading-[24px] tracking-[1px] text-[14px]`}
@@ -81,7 +89,11 @@ const Cart = () => {
                   </span>
                 </div>
               </div>
-              <div className={`flex items-center gap-[10px]`}>
+              <div className={`flex items-center gap-[10px]
+                
+                max-xl:justify-center
+                
+                `}>
                 <div
                   className={`btn_quantity flex justify-between items-center gap-[8px] 
                     rounded-2xl border-[1px] border-gray-400 w-[140px] h-[36px]
@@ -121,11 +133,13 @@ const Cart = () => {
             </div>
           </div>
           {/* ----------------------------- */}
-          <div
+           <div
             className={`product
             flex gap-[24px]
                 ${classes.spliter}
-                max-sm:flex-col max-sm:justify-center 
+                max-sm:justify-center 
+                max-md:flex-col 
+                max-lg:items-center
             `}
           >
             <Image
@@ -137,8 +151,9 @@ const Cart = () => {
             />
             <div
               className={`prod_info
-                w-[645px] h-[162px] max-sm:h-full flex gap-[24px] px-[24px]
-                max-sm:flex-col max-sm:w-full max-sm:px-[10px]
+                w-[645px] h-[162px] max-lg:h-full flex gap-[24px] px-[24px]
+                max-lg:flex-col max-lg:w-full max-lg:px-[10px] 
+                
 
                 `}
             >
@@ -154,7 +169,10 @@ const Cart = () => {
                   Jojoba OIi 240ml
                 </p>
                 <div
-                  className={`price flex justify-between items-center gap-[24px] max-sm:flex-wrap max-sm:justify-around`}
+                  className={`price flex justify-between items-center gap-[24px]  
+                    max-md:justify-around max-md:flex-wrap
+                    
+                    `}
                 >
                   <span
                     className={`price_after_discount font-[700] leading-[24px] tracking-[1px] text-[14px]`}
@@ -175,7 +193,11 @@ const Cart = () => {
                   </span>
                 </div>
               </div>
-              <div className={`flex items-center gap-[10px]`}>
+              <div className={`flex items-center gap-[10px]
+                
+                max-xl:justify-center
+                
+                `}>
                 <div
                   className={`btn_quantity flex justify-between items-center gap-[8px] 
                     rounded-2xl border-[1px] border-gray-400 w-[140px] h-[36px]
@@ -221,6 +243,7 @@ const Cart = () => {
           className={`box2
             border-gray-300 border-[1px] rounded-2xl w-full max-w-[631px] h-[432px] max-sm:h-full p-[64px] flex flex-col gap-[36px]
             max-sm:p-[20px] max-sm:my-[50px]
+            max-xl:mx-auto
                         `}
         >
           <p
@@ -273,7 +296,7 @@ const Cart = () => {
           </Link>
         </div>
       </div>
-      <BestSellerProducts title='Explore Recently Viewed Products' style='text-center'/>
+      <BestSellerProducts title='Explore Recently Viewed Products' style={`text-center`}/>
      
     </div>
   );

@@ -18,15 +18,20 @@ const BestSellerProducts = ({title,style}) => {
       <div className="relative">
         <div className={`
           flex justify-between items-center pb-[20px]
+          
           `}>
 
         <div className={`title w-full ${style}`}>
           <h1 className={`font-[700] text-[40px] leading-[64px]
-            max-lg:text-[32px]
+            
+            max-md:text-[24px]  max-md:leading-[40px] 
+            max-lg:text-[32px] 
             `}>{title}</h1>
         </div>
         {/* Custom navigation buttons */}
-        <div className={classes.navContainer}>
+        <div className={`${classes.navContainer}
+   max-sm:top-[40px]
+        `}>
           <button ref={prevRef} className={classes.navBtn}>
             <AiOutlineLeft />
           </button>

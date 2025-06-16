@@ -21,10 +21,9 @@
   height: 100%;
   object-fit: cover;
 }
-
+/* 
 .swiperWrapper :global(.swiper-pagination-bullet) {
-  background-color: #000000;
-  /* opacity: 0.5; */
+  background-color: #466911;
   width: 30px;
   height: 10px;
   margin: 0 6px;
@@ -33,11 +32,11 @@
 }
 
 .swiperWrapper :global(.swiper-pagination-bullet-active) {
-  background-color: #151515; /* amber-400 */
+  background-color: #151515;
  width: 80px !important;
           border-radius: 10px !important;
           transition: width 0.3s ease !important;
-}
+} */
 
 .img_{
 transform: translate(-50%,-50%);

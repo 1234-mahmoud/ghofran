@@ -90,7 +90,7 @@ const BestSellerProducts = ({title,style}) => {
                   alt="image"
                   className="w-full h-[304px] rounded-sm"
                 />
-                <div className={`bage absolute bg-black text-white top-[16px] left-[16px]  w-[88px] h-[32px]
+                <div className={`bage absolute bg-lime-800 text-white top-[16px] left-[16px]  w-[88px] h-[32px]
                 rounded-md pt-[4px] pb-[4px] pr-[8px] pl-[8px]
                 font-[400] text-[14px] flex justify-center items-center
                   `}>Best Seller</div>

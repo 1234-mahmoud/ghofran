@@ -32,7 +32,7 @@ const Ghofran = () => {
       >
         {/* Left Large Box */}
         <div
-          className={`${classes.box1} bg-gray-400 w-full xl:max-w-[864px] h-[300px] sm:h-[500px] relative overflow-hidden xl:h-[864px]`}
+          className={`${classes.box1} w-full xl:max-w-[864px] h-[300px] sm:h-[500px] relative overflow-hidden xl:h-[864px]`}
         >
           <Image src="/pic.jpg" alt="pic" fill />
         </div>
@@ -44,7 +44,8 @@ const Ghofran = () => {
           {imgs.map((i, index) => (
             <div
               key={index}
-              className={`${classes.child_box} bg-gray-400 w-full sm:w-[48%] relative overflow-hidden h-[200px] sm:h-[300px] xl:h-[424px]`}
+              className={`${classes.child_box} w-full sm:w-[48%] relative overflow-hidden xl:h-[424px] xl:max-w-[864px] h-[300px] sm:h-[500px]  
+              `}
             >
               <Image src={i} alt="pic" fill />
             </div>

@@ -27,7 +27,10 @@ const Customers = () => {
 
   return (
     <div className={`relative my-[150px] w-full max-w-[1640px] mx-auto h-[732px]  
-    flex gap-[46px]`}>
+    flex gap-[46px]
+    max-sm:px-[10px]
+    max-md:flex-col max-lg:h-[550px]
+    `}>
 
       <div className={`${classes.navContainer} max-sm:top-[40px]`}>
             <button ref={prevRef} className={classes.navBtn}>
@@ -38,7 +41,9 @@ const Customers = () => {
             </button>
           </div>
       {/*------------------------------Active Slide Display------------------------- */}
-      <div className="w-full max-w-[469px] h-full relative overflow-hidden">
+      <div className={`w-full max-w-[469px] h-full relative overflow-hidden
+        max-md:hidden
+        `}>
         <Image
           src={images[activeIndex]}
           alt="active-slide"
@@ -51,16 +56,29 @@ const Customers = () => {
       <div
         className={`swiber_box w-full max-w-[1126px]
         flex flex-col gap-[80px] relative rounded overflow-hidden
+
         `}
       >
         {/* Title Section*/}
   
-          <div className="title flex flex-col gap-[16px]">
-          <h2 className="font-[700] text-[48px] leading-[56px]  max-lg:text-[35px]">
+          <div className={`title flex flex-col gap-[16px]
+            max-sm:gap-0
+            `}>
+          <h2 className={`font-[700] text-[48px] leading-[56px]  
+          max-md:text-[24px]
+          max-lg:text-[35px]
+            max-lg:mt-[50px] 
+          
+          `}>
             What Our Customers Say?
           </h2>
           <p className={`font-[700] text-[32px] leading-[48px] tracking-[1px]
-            w-full max-w-[707px] mt-[15px]
+            w-full max-w-[707px] mt-[17px]
+            max-sm:mt-0
+
+          max-md:text-[20px]
+          max-lg:text-[24px]
+
             `}>
             Real reviews from happy shoppers who love Ghufran’s quality and
             service.
@@ -101,7 +119,9 @@ const Customers = () => {
                 spaceBetween: 24,
               },
             }}
-            className={`mySwiper w-full h-[462px] relative rounded-md`}
+            className={`mySwiper w-full h-[462px] relative rounded-md
+            
+              `}
           >
             {images.map((src, idx) => (
               <SwiperSlide

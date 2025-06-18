@@ -14,8 +14,8 @@ const Customers = () => {
   const nextRef = useRef(null);
 
   return (
-    <div className={` relative
-    max-lg:mt-[150px]
+    <div className={`relative my-[150px]
+   
     
     `}>
       {/* Title Section */}
@@ -73,31 +73,28 @@ const Customers = () => {
           max-lg:h-[340px]
           `}
         >
-          <SwiperSlide>
+          <SwiperSlide className="reltive overflow-hidden">
             <Image
               src="/pic.jpg"
               alt="slide-img"
-              width={500}
-              height={500}
-              className={classes.img_}
+             fill
+             
             />
           </SwiperSlide>
-          <SwiperSlide>
+          <SwiperSlide className="reltive overflow-hidden">
             <Image
               src="/pic2.jpg"
               alt="slide-img"
-              width={500}
-              height={500}
-              className={classes.img_}
+              fill
+             
             />
           </SwiperSlide>
-          <SwiperSlide>
+          <SwiperSlide className="reltive overflow-hidden">
             <Image
               src="/pic3.jpg"
               alt="slide-img"
-              width={500}
-              height={500}
-              className={classes.img_}
+              fill
+             
             />
           </SwiperSlide>
         </Swiper>

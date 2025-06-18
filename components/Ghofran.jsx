@@ -1,6 +1,7 @@
 import classes from "../style/ghofran.module.css";
-
+import Image from "next/image";
 const Ghofran = () => {
+  const imgs=['/pic4.jpg','/pic5.jpg','/pic4.jpg','/pic5.jpg'];
   return (
     <div className={`my-24 md:my-[200px] flex flex-col gap-14 md:gap-[56px] justify-center items-center px-4
     max-lg:my-[150px]
@@ -24,15 +25,26 @@ const Ghofran = () => {
       {/* Image Blocks */}
       <div className={`${classes.blocks} flex flex-col xl:flex-row gap-4 w-full max-w-[1744px] px-4`}>
         {/* Left Large Box */}
-        <div className={`${classes.box1} bg-gray-400 w-full xl:max-w-[864px] h-[300px] sm:h-[500px] xl:h-[864px]`}></div>
+        <div className={`${classes.box1} bg-gray-400 w-full xl:max-w-[864px] h-[300px] sm:h-[500px] relative overflow-hidden xl:h-[864px]`}>
+<Image src='/pic.jpg' alt='pic' 
+              fill
+            
+              />
+
+        </div>
 
         {/* Right Grid Boxes */}
         <div className={`${classes.box2} w-full xl:max-w-[864px] flex flex-wrap gap-4`}>
-          {[1, 2, 3, 4].map((_, index) => (
+          {imgs.map((i, index) => (
             <div
               key={index}
-              className={`${classes.child_box} bg-gray-400 w-full sm:w-[48%] h-[200px] sm:h-[300px] xl:h-[424px]`}
-            ></div>
+              className={`${classes.child_box} bg-gray-400 w-full sm:w-[48%] relative overflow-hidden h-[200px] sm:h-[300px] xl:h-[424px]`}
+            >
+              <Image src={i} alt='pic' 
+              fill
+            
+              />
+            </div>
           ))}
         </div>
       </div>

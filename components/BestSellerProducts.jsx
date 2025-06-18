@@ -82,13 +82,12 @@ const BestSellerProducts = ({title,style,badge}) => {
         >
           {[...Array(8)].map((_, idx) => (
             <SwiperSlide key={idx} className="flex justify-center gap-[24px]">
-              <div className="product flex flex-col gap-8 w-full max-w-[392px] h-[424px] relative">
+              <div className="product flex flex-col gap-8 w-full max-w-[392px] h-[304px] relative overflow-hidden">
                 <Image
                   src="/pic.jpg"
-                  width={300}
-                  height={300}
+                  fill
                   alt="image"
-                  className="w-full h-[304px] rounded-sm"
+                
                 />
                 <div className={`bage absolute bg-lime-800 text-white top-[16px] left-[16px]  w-[88px] h-[32px]
                 rounded-md pt-[4px] pb-[4px] pr-[8px] pl-[8px]

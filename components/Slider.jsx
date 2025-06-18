@@ -35,13 +35,13 @@ export default function Slider() {
             max-lg:h-[340px]
         `}
       >
-        <SwiperSlide>
+        <SwiperSlide className='reltaive overflow-hidden'>
           <Image src="/slide_1.jpg" alt="slide-img" fill />
         </SwiperSlide>
-        <SwiperSlide>
+        <SwiperSlide className='reltaive overflow-hidden'>
           <Image src="/slide_2.jpg" alt="slide-img" fill />
         </SwiperSlide>
-        <SwiperSlide>
+        <SwiperSlide className='reltaive overflow-hidden'>
           <Image src="/pic3.jpg" alt="slide-img" fill />
         </SwiperSlide>
 

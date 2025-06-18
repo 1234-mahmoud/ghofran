@@ -1,6 +1,6 @@
 "use client";
 
-import { useRef } from "react";
+import { useRef, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Autoplay } from "swiper/modules";
 import "swiper/css";
@@ -12,35 +12,24 @@ import classes from "../style/customers.module.css";
 const Customers = () => {
   const prevRef = useRef(null);
   const nextRef = useRef(null);
+  const [activeIndex, setActiveIndex] = useState(0);
+
+  const images = [
+    "/pic.jpg",
+    "/pic2.jpg",
+    "/pic3.jpg",
+    "/pic.jpg",
+    "/pic2.jpg",
+    "/pic3.jpg",
+    "/pic.jpg",
+    "/pic2.jpg",
+  ];
 
   return (
-    <div className={`relative my-[150px]
-   
-    
-    `}>
-      {/* Title Section */}
-      <div className="title">
-        <h2 className={`font-[700] text-[48px] leading-[56px] text-center
-          max-lg:text-[35px]
-          `}>
-          What Our Customers Say?
-        </h2>
-        <p className="font-[700] text-[20px] leading-[40px] tracking-[1px] text-center">
-          Real reviews from happy shoppers who love Ghufran’s quality and service.
-        </p>
-      </div>
+    <div className={`relative my-[150px] w-full max-w-[1640px] mx-auto h-[732px]  
+    flex gap-[46px]`}>
 
-      {/* Swiper Section */}
-      <div
-        className={`container mx-auto px-[88px] relative flex flex-col gap-[36px]
-          max-lg:px-[10px]
-          `}
-      >
-        {/* Custom Navigation Buttons */}
-        <div className="relative flex justify-between items-center">
-          <div
-            className={`${classes.navContainer} w-full justify-between items-center gap-[150px] flex`}
-          >
+      <div className={`${classes.navContainer} max-sm:top-[40px]`}>
             <button ref={prevRef} className={classes.navBtn}>
               <AiOutlineLeft />
             </button>
@@ -48,56 +37,89 @@ const Customers = () => {
               <AiOutlineRight />
             </button>
           </div>
+      {/*------------------------------Active Slide Display------------------------- */}
+      <div className="w-full max-w-[469px] h-full relative overflow-hidden">
+        <Image
+          src={images[activeIndex]}
+          alt="active-slide"
+          fill
+          className="object-cover"
+        />
+      </div>
+      {/*------------------------------swiber_box------------------------- */}
+
+      <div
+        className={`swiber_box w-full max-w-[1126px]
+        flex flex-col gap-[80px] relative rounded overflow-hidden
+        `}
+      >
+        {/* Title Section*/}
+  
+          <div className="title flex flex-col gap-[16px]">
+          <h2 className="font-[700] text-[48px] leading-[56px]  max-lg:text-[35px]">
+            What Our Customers Say?
+          </h2>
+          <p className={`font-[700] text-[32px] leading-[48px] tracking-[1px]
+            w-full max-w-[707px] mt-[15px]
+            `}>
+            Real reviews from happy shoppers who love Ghufran’s quality and
+            service.
+          </p>
         </div>
 
-        {/* Swiper Component */}
-        <Swiper
-          modules={[Navigation, Autoplay]}
-          navigation={{
-            prevEl: prevRef.current,
-            nextEl: nextRef.current,
-          }}
-          onBeforeInit={(swiper) => {
-            if (typeof window !== "undefined") {
-              swiper.params.navigation.prevEl = prevRef.current;
-              swiper.params.navigation.nextEl = nextRef.current;
-            }
-          }}
-          autoplay={{
-            delay: 5000,
-            disableOnInteraction: false,
-          }}
-          loop={true}
-          speed={1500}
-          className={`${classes.swiperWrapper} mySwiper w-full max-w-[90%] mb-[100px] mx-auto h-[540px] relative rounded-md bg-gray-300
-          max-lg:h-[340px]
-          `}
-        >
-          <SwiperSlide className="reltive overflow-hidden">
-            <Image
-              src="/pic.jpg"
-              alt="slide-img"
-             fill
-             
-            />
-          </SwiperSlide>
-          <SwiperSlide className="reltive overflow-hidden">
-            <Image
-              src="/pic2.jpg"
-              alt="slide-img"
-              fill
-             
-            />
-          </SwiperSlide>
-          <SwiperSlide className="reltive overflow-hidden">
-            <Image
-              src="/pic3.jpg"
-              alt="slide-img"
-              fill
-             
-            />
-          </SwiperSlide>
-        </Swiper>
+          {/* Swiper Component */}
+          <Swiper
+            modules={[Navigation]}
+            navigation={{
+              prevEl: prevRef.current,
+              nextEl: nextRef.current,
+            }}
+            onBeforeInit={(swiper) => {
+              if (typeof window !== "undefined") {
+                swiper.params.navigation.prevEl = prevRef.current;
+                swiper.params.navigation.nextEl = nextRef.current;
+              }
+            }}
+            onSlideChange={(swiper) => setActiveIndex(swiper.realIndex)}
+            loop={true}
+            speed={500}
+            breakpoints={{
+              320: {
+                slidesPerView: 1,
+                spaceBetween: 16,
+              },
+              480: {
+                slidesPerView: 2,
+                spaceBetween: 16,
+              },
+              768: {
+                slidesPerView: 3,
+                spaceBetween: 20,
+              },
+              1024: {
+                slidesPerView: 4,
+                spaceBetween: 24,
+              },
+            }}
+            className={`mySwiper w-full h-[462px] relative rounded-md`}
+          >
+            {images.map((src, idx) => (
+              <SwiperSlide
+                key={idx}
+                className="relative overflow-hidden rounded-md "
+              >
+                <div className="relative w-full h-full">
+                  <Image
+                    src={src}
+                    alt={`slide-img-${idx}`}
+                    fill
+                    className="object-cover"
+                  />
+                </div>
+              </SwiperSlide>
+            ))}
+          </Swiper>
+        
       </div>
     </div>
   );

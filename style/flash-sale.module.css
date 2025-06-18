@@ -1,0 +1,28 @@
+.navContainer {
+  /* position: absolute; */
+  right: 0;
+  z-index: 10;
+  display: flex;
+  gap: 8px;
+}
+
+
+.navBtn {
+  background: #fff;
+  border: 1px solid black;
+  border-radius: 4px;
+  padding: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  cursor: pointer;
+  font-size: 20px;
+  transition: background 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.navBtn:hover {
+  background:black;
+  color: white;
+}
+

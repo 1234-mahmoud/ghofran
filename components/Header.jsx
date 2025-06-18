@@ -180,7 +180,7 @@ export default function Header() {
         </p>
         <div className={`${classes.data_time} flex items-center gap-[24px] max-lg:gap-[12px] max-sm:gap-[8px]`}>
           {["Days", "Hours", "Minutes", "Seconds"].map((label, index) => (
-            <>
+            <div key={index}>
               {index > 0 && ':'}
               <div className="flex justify-center items-center font-[700] text-[1.25rem] max-lg:text-[1rem] max-sm:text-[0.9rem]">
                 <span className={`flex flex-col justify-center items-center`}>
@@ -188,7 +188,7 @@ export default function Header() {
                   {label}
                 </span>
               </div>
-            </>
+            </div>
           ))}
         </div>
       </div>

@@ -16,6 +16,7 @@ const Customers = () => {
   return (
     <div className={` relative
     max-lg:mt-[150px]
+    
     `}>
       {/* Title Section */}
       <div className="title">

@@ -296,7 +296,7 @@ const Cart = () => {
           </Link>
         </div>
       </div>
-      <BestSellerProducts title='Explore Recently Viewed Products' style={`text-center`}/>
+      <BestSellerProducts title='Explore Recently Viewed Products' style={`text-center`} badge="Best Seller"/>
      
     </div>
   );

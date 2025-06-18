@@ -1,44 +1,94 @@
 "use client";
 
-import { useRef } from "react";
+import { useRef,useContext } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 import { AiOutlineLeft, AiOutlineRight, AiFillStar } from "react-icons/ai";
 import Image from "next/image";
-import classes from "../style/best-seller.module.css";
+import classes from "../style/flash-sale.module.css";
 import Link from "next/link";
-const BestSellerProducts = ({title,style,badge}) => {
+import { ContextProvider } from "context/AppProvider";
+const FlashSale = () => {
   const prevRef = useRef(null);
   const nextRef = useRef(null);
+  const { now } = useContext(ContextProvider);
 
   return (
-    <div className="container mx-auto px-4 relative">
+    <div className="container mx-auto px-4 relative
+    max-xl:my-[150px]
+    ">
       <div className="relative">
-        <div className={`
+        <div
+          className={`
           flex justify-between items-center pb-[20px]
+          max-md:flex-col   max-md:gap-[24px]
+          `}
+        >
+          <div className={`title w-full flex gap-[24px] items-center
+          max-sm:flex-col max-sm:text-[1rem] 
           
-          `}>
-
-        <div className={`title w-full ${style}`}>
-          <h1 className={`font-[700] text-[40px] leading-[64px]
-            
+            `}>
+            <h3
+              className={`font-[700] text-[40px] leading-[64px]
             max-md:text-[24px]  max-md:leading-[40px] 
-            max-lg:text-[32px] 
-            `}>{title}</h1>
-        </div>
-        {/* Custom navigation buttons */}
-        <div className={`${classes.navContainer}
-   max-sm:top-[40px]
-        `}>
-          <button ref={prevRef} className={classes.navBtn}>
-            <AiOutlineLeft />
-          </button>
-          <button ref={nextRef} className={classes.navBtn}>
-            <AiOutlineRight />
-          </button>
-        </div>
+            max-lg:text-[22px]
+            max-xl:text-[28px] 
+            `}
+            >
+              Flash Sale! 🔥
+            </h3>
+            <h4 className={`font-[700] text-[32px] leading-[40px] text-lime-950 uppercase flex gap-[8px]
+             max-sm:text-[1rem]
+            max-lg:text-[22px]
+            max-xl:text-[28px] 
+                
+                `}>
+              Ends in
+              <span className={`flex text-red-600`}>
+                {["h", "m", "s"].map((label, index) => (
+                  <>
+                    {index > 0 && ":"}
+                    <div className="">
+                      <span
+                        className={`flex lowercase
+             max-sm:text-[rem]
+                            
+                            `}
+                      >
+                        <span>
+                          {
+                            [
+                              now.getHours(),
+                              now.getMinutes(),
+                              now.getSeconds(),
+                            ][index]
+                          }
+                        </span>
+                        {label}
+                      </span>
+                    </div>
+                  </>
+                ))}
+              </span>{" "}
+              ـــــ don't miss out
+            </h4>
+          </div>
+          {/* Custom navigation buttons */}
+          <div
+            className={`${classes.navContainer}
+            max-sm:ml-[70%]
+            max-md:ml-[80%] 
+        `}
+          >
+            <button ref={prevRef} className={classes.navBtn}>
+              <AiOutlineLeft />
+            </button>
+            <button ref={nextRef} className={classes.navBtn}>
+              <AiOutlineRight />
+            </button>
+          </div>
         </div>
 
         <Swiper
@@ -46,23 +96,23 @@ const BestSellerProducts = ({title,style,badge}) => {
             // when window width is >= 320px
             320: {
               slidesPerView: 1,
-              spaceBetween: 16
+              spaceBetween: 16,
             },
             // when window width is >= 480px
             480: {
               slidesPerView: 2,
-              spaceBetween: 16
+              spaceBetween: 16,
             },
             // when window width is >= 768px
             768: {
               slidesPerView: 3,
-              spaceBetween: 20
+              spaceBetween: 20,
             },
             // when window width is >= 1024px
             1024: {
               slidesPerView: 4,
-              spaceBetween: 24
-            }
+              spaceBetween: 24,
+            },
           }}
           loop={true}
           navigation={{
@@ -90,10 +140,14 @@ const BestSellerProducts = ({title,style,badge}) => {
                   alt="image"
                   className="w-full h-[304px] rounded-sm"
                 />
-                <div className={`bage absolute bg-lime-800 text-white top-[16px] left-[16px]  w-[88px] h-[32px]
+                <div
+                  className={`bage absolute bg-lime-800 text-white top-[16px] left-[16px]  w-[111px] h-[32px]
                 rounded-md pt-[4px] pb-[4px] pr-[8px] pl-[8px]
                 font-[400] text-[14px] flex justify-center items-center
-                  `}>{badge}</div>
+                  `}
+                >
+                  🔥Flash Sale 
+                </div>
                 <div className="cat flex flex-col gap-2">
                   <span
                     className={`${classes.cat_type} flex justify-between items-center font-normal leading-6`}
@@ -131,14 +185,16 @@ const BestSellerProducts = ({title,style,badge}) => {
           ))}
         </Swiper>
       </div>
-        <button className={`
+      <button
+        className={`
           bg-black text-white w-[206px] h-[48px] rounded-md mt-[48px] absolute translate-x-[-50%] left-[50%]
           font-[700] text-[16px] leading-[16px] tracking-[1px]
-          `}>
-            <Link href='/all_products'>View All Products</Link>
-          </button>
+          `}
+      >
+        <Link href="/all_products">View All Products</Link>
+      </button>
     </div>
   );
 };
 
-export default BestSellerProducts;
+export default FlashSale;

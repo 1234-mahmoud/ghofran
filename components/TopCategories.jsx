@@ -29,7 +29,7 @@ height:130,
     <div
       className={`
         ${classes.topcat}
-        min-h-[563px] flex flex-col gap-[36px] mb-[100px] py-[48px] 
+        min-h-[563px] flex flex-col gap-[36px] my-[100px] py-[48px] 
         max-h-full
         `}
     >

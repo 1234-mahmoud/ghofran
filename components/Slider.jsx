@@ -32,7 +32,7 @@ export default function Slider() {
         className={`${classes.swiperWrapper} mySwiper 
             w-full max-w-[90%] mt-[50px] mx-auto h-[969px] relative
             rounded-md bg-gray-300 
-            max-lg:h-[340px]
+            max-2xl:h-[340px]
         `}
       >
         <SwiperSlide className='reltaive overflow-hidden'>

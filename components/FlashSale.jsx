@@ -190,7 +190,7 @@ const FlashSale = () => {
           font-[700] text-[16px] leading-[16px] tracking-[1px]
           `}
       >
-        <Link href="/all_products">View All Products</Link>
+        <Link href="/flash_sale">View All Products</Link>
       </button>
     </div>
   );

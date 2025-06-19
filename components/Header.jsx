@@ -82,7 +82,7 @@ export default function Header() {
         `}
       >
         <div className={`logo w-[150px] h-[90px] max-lg:w-[50px] max-lg:h-[50px] max-lg:rounded-full max-sm:w-[50px] max-sm:h-[50px] max-sm:rounded-full`}>
-          <Image src='/logo.svg' alt="logo" width={101} height={88}/>
+          <Image src='/Logo.svg' alt="logo" width={101} height={88}/>
         </div>
 
         <div className={`utilities w-full max-w-[656px] flex items-center gap-[48px] 

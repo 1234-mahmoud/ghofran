@@ -30,7 +30,7 @@ max-xl:mt-[-50px]
             flex flex-col items-center gap-[24px]
             `}
         >
-          <Image src="/logo.svg" alt="logo" width={142} height={154} />
+          <Image src="/Logo.svg" alt="logo" width={142} height={154} />
           <span
             className={`font-[700] text-gray-900 text-[14px] leading-[24px] tracking-[1px]`}
           >

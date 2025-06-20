@@ -11,14 +11,21 @@ export default function Products() {
     <>
       <ProductsCat />
       {/* ------------------------------------------------------------- */}
+     
       <div
         className={`${classes.products} mt-[100px]  flex gap-[56px] flex-wrap justify-center items-center 
         max-lg:px-[10px]
         `}
       >
         <div
-          className={`product flex flex-col gap-8 w-full max-w-[392px] h-[424px] `}
+          className={`product flex flex-col gap-8 w-full max-w-[392px] h-[424px] relative`}
         >
+          <div className={`bage absolute  text-white top-[16px] left-[16px]  h-[32px]
+                rounded-md pt-[4px] pb-[4px] pr-[8px] pl-[8px]
+                font-[400] text-[14px] flex justify-center items-center
+                  bg-black w-[88px]
+                  `}>Best Seller</div>
+
           <Image
             src={pic}
             alt="image"
@@ -49,12 +56,12 @@ export default function Products() {
                 240.00 EGP
               </span>
               <span
-                className={`${classes.price_before_discount} line-through font-[400] leading-[24px] text-[14px]`}
+                className={`text-lime-800 line-through font-[400] leading-[24px] text-[14px]`}
               >
                 640.00 EGP
               </span>
               <span
-                className={`${classes.money_saved}  font-[400] leading-[24px] text-[14px]`}
+                className={`text-red-600  font-[400] leading-[24px] text-[14px]`}
               >
                 Save 400 EGP
               </span>
@@ -63,14 +70,19 @@ export default function Products() {
         </div>
 
         <div
-          className={`product flex flex-col gap-8 w-full max-w-[392px] h-[424px] `}
+          className={`product flex flex-col gap-8 w-full max-w-[392px] h-[424px] relative`}
         >
+          <div className={`bage absolute  text-white top-[16px] left-[16px]  h-[32px]
+                rounded-md pt-[4px] pb-[4px] pr-[8px] pl-[8px]
+                font-[400] text-[14px] flex justify-center items-center 
+                  bg-black w-[88px]
+                  `}>Best Seller</div>
           <Image
             src={pic}
             alt="image"
             className={`w-full h-[304px] rounded-sm`}
           />
-          <div className="cat  flex flex-col gap-[8px]">
+          <div className="cat flex flex-col gap-[8px]">
             <span
               className={`${classes.cat_type} flex justify-between items-center font-[400] leading-[24px]`}
             >
@@ -95,12 +107,12 @@ export default function Products() {
                 240.00 EGP
               </span>
               <span
-                className={`${classes.price_before_discount} line-through font-[400] leading-[24px] text-[14px]`}
+                className={`text-lime-800 line-through font-[400] leading-[24px] text-[14px]`}
               >
                 640.00 EGP
               </span>
               <span
-                className={`${classes.money_saved}  font-[400] leading-[24px] text-[14px]`}
+                className={`text-red-600  font-[400] leading-[24px] text-[14px]`}
               >
                 Save 400 EGP
               </span>
@@ -109,14 +121,19 @@ export default function Products() {
         </div>
 
         <div
-          className={`product flex flex-col gap-8 w-full max-w-[392px] h-[424px] `}
+          className={`product flex flex-col gap-8 w-full max-w-[392px] h-[424px] relative`}
         >
+          <div className={`bage absolute  text-white top-[16px] left-[16px]  h-[32px]
+                rounded-md pt-[4px] pb-[4px] pr-[8px] pl-[8px]
+                font-[400] text-[14px] flex justify-center items-center
+                  bg-black w-[88px]
+                  `}>Best Seller</div>
           <Image
             src={pic}
             alt="image"
             className={`w-full h-[304px] rounded-sm`}
           />
-          <div className="cat  flex flex-col gap-[8px]">
+          <div className="cat flex flex-col gap-[8px]">
             <span
               className={`${classes.cat_type} flex justify-between items-center font-[400] leading-[24px]`}
             >
@@ -141,12 +158,12 @@ export default function Products() {
                 240.00 EGP
               </span>
               <span
-                className={`${classes.price_before_discount} line-through font-[400] leading-[24px] text-[14px]`}
+                className={`text-lime-800 line-through font-[400] leading-[24px] text-[14px]`}
               >
                 640.00 EGP
               </span>
               <span
-                className={`${classes.money_saved}  font-[400] leading-[24px] text-[14px]`}
+                className={`text-red-600  font-[400] leading-[24px] text-[14px]`}
               >
                 Save 400 EGP
               </span>
@@ -154,15 +171,21 @@ export default function Products() {
           </div>
         </div>
 
+
         <div
-          className={`product flex flex-col gap-8 w-full max-w-[392px] h-[424px] `}
+          className={`product flex flex-col gap-8 w-full max-w-[392px] h-[424px] relative`}
         >
+          <div className={`bage absolute  text-white top-[16px] left-[16px]  h-[32px]
+                rounded-md pt-[4px] pb-[4px] pr-[8px] pl-[8px]
+                font-[400] text-[14px] flex justify-center items-center
+                  bg-black w-[88px]
+                  `}>Best Seller</div>
           <Image
             src={pic}
             alt="image"
             className={`w-full h-[304px] rounded-sm`}
           />
-          <div className="cat  flex flex-col gap-[8px]">
+          <div className="cat flex flex-col gap-[8px]">
             <span
               className={`${classes.cat_type} flex justify-between items-center font-[400] leading-[24px]`}
             >
@@ -187,12 +210,12 @@ export default function Products() {
                 240.00 EGP
               </span>
               <span
-                className={`${classes.price_before_discount} line-through font-[400] leading-[24px] text-[14px]`}
+                className={`text-lime-800 line-through font-[400] leading-[24px] text-[14px]`}
               >
                 640.00 EGP
               </span>
               <span
-                className={`${classes.money_saved}  font-[400] leading-[24px] text-[14px]`}
+                className={`text-red-600  font-[400] leading-[24px] text-[14px]`}
               >
                 Save 400 EGP
               </span>
@@ -201,14 +224,19 @@ export default function Products() {
         </div>
 
         <div
-          className={`product flex flex-col gap-8 w-full max-w-[392px] h-[424px] `}
+          className={`product flex flex-col gap-8 w-full max-w-[392px] h-[424px] relative`}
         >
+          <div className={`bage absolute  text-white top-[16px] left-[16px]  h-[32px]
+                rounded-md pt-[4px] pb-[4px] pr-[8px] pl-[8px]
+                font-[400] text-[14px] flex justify-center items-center
+                  bg-black w-[88px]
+                  `}>Best Seller</div>
           <Image
             src={pic}
             alt="image"
             className={`w-full h-[304px] rounded-sm`}
           />
-          <div className="cat  flex flex-col gap-[8px]">
+          <div className="cat flex flex-col gap-[8px]">
             <span
               className={`${classes.cat_type} flex justify-between items-center font-[400] leading-[24px]`}
             >
@@ -233,12 +261,12 @@ export default function Products() {
                 240.00 EGP
               </span>
               <span
-                className={`${classes.price_before_discount} line-through font-[400] leading-[24px] text-[14px]`}
+                className={`text-lime-800 line-through font-[400] leading-[24px] text-[14px]`}
               >
                 640.00 EGP
               </span>
               <span
-                className={`${classes.money_saved}  font-[400] leading-[24px] text-[14px]`}
+                className={`text-red-600  font-[400] leading-[24px] text-[14px]`}
               >
                 Save 400 EGP
               </span>
@@ -246,15 +274,21 @@ export default function Products() {
           </div>
         </div>
 
+
         <div
-          className={`product flex flex-col gap-8 w-full max-w-[392px] h-[424px] `}
+          className={`product flex flex-col gap-8 w-full max-w-[392px] h-[424px] relative`}
         >
+          <div className={`bage absolute  text-white top-[16px] left-[16px]  h-[32px]
+                rounded-md pt-[4px] pb-[4px] pr-[8px] pl-[8px]
+                font-[400] text-[14px] flex justify-center items-center
+                  bg-black w-[88px]
+                  `}>Best Seller</div>
           <Image
             src={pic}
             alt="image"
             className={`w-full h-[304px] rounded-sm`}
           />
-          <div className="cat  flex flex-col gap-[8px]">
+          <div className="cat flex flex-col gap-[8px]">
             <span
               className={`${classes.cat_type} flex justify-between items-center font-[400] leading-[24px]`}
             >
@@ -279,12 +313,12 @@ export default function Products() {
                 240.00 EGP
               </span>
               <span
-                className={`${classes.price_before_discount} line-through font-[400] leading-[24px] text-[14px]`}
+                className={`text-lime-800 line-through font-[400] leading-[24px] text-[14px]`}
               >
                 640.00 EGP
               </span>
               <span
-                className={`${classes.money_saved}  font-[400] leading-[24px] text-[14px]`}
+                className={`text-red-600  font-[400] leading-[24px] text-[14px]`}
               >
                 Save 400 EGP
               </span>
@@ -293,14 +327,19 @@ export default function Products() {
         </div>
 
         <div
-          className={`product flex flex-col gap-8 w-full max-w-[392px] h-[424px] `}
+          className={`product flex flex-col gap-8 w-full max-w-[392px] h-[424px] relative`}
         >
+          <div className={`bage absolute  text-white top-[16px] left-[16px]  h-[32px]
+                rounded-md pt-[4px] pb-[4px] pr-[8px] pl-[8px]
+                font-[400] text-[14px] flex justify-center items-center
+                  bg-black w-[88px]
+                  `}>Best Seller</div>
           <Image
             src={pic}
             alt="image"
             className={`w-full h-[304px] rounded-sm`}
           />
-          <div className="cat  flex flex-col gap-[8px]">
+          <div className="cat flex flex-col gap-[8px]">
             <span
               className={`${classes.cat_type} flex justify-between items-center font-[400] leading-[24px]`}
             >
@@ -325,12 +364,12 @@ export default function Products() {
                 240.00 EGP
               </span>
               <span
-                className={`${classes.price_before_discount} line-through font-[400] leading-[24px] text-[14px]`}
+                className={`text-lime-800 line-through font-[400] leading-[24px] text-[14px]`}
               >
                 640.00 EGP
               </span>
               <span
-                className={`${classes.money_saved}  font-[400] leading-[24px] text-[14px]`}
+                className={`text-red-600  font-[400] leading-[24px] text-[14px]`}
               >
                 Save 400 EGP
               </span>
@@ -338,15 +377,21 @@ export default function Products() {
           </div>
         </div>
 
+
         <div
-          className={`product flex flex-col gap-8 w-full max-w-[392px] h-[424px] `}
+          className={`product flex flex-col gap-8 w-full max-w-[392px] h-[424px] relative`}
         >
+          <div className={`bage absolute  text-white top-[16px] left-[16px]  h-[32px]
+                rounded-md pt-[4px] pb-[4px] pr-[8px] pl-[8px]
+                font-[400] text-[14px] flex justify-center items-center
+                  bg-black w-[88px]
+                  `}>Best Seller</div>
           <Image
             src={pic}
             alt="image"
             className={`w-full h-[304px] rounded-sm`}
           />
-          <div className="cat  flex flex-col gap-[8px]">
+          <div className="cat flex flex-col gap-[8px]">
             <span
               className={`${classes.cat_type} flex justify-between items-center font-[400] leading-[24px]`}
             >
@@ -371,12 +416,12 @@ export default function Products() {
                 240.00 EGP
               </span>
               <span
-                className={`${classes.price_before_discount} line-through font-[400] leading-[24px] text-[14px]`}
+                className={`text-lime-800 line-through font-[400] leading-[24px] text-[14px]`}
               >
                 640.00 EGP
               </span>
               <span
-                className={`${classes.money_saved}  font-[400] leading-[24px] text-[14px]`}
+                className={`text-red-600  font-[400] leading-[24px] text-[14px]`}
               >
                 Save 400 EGP
               </span>
@@ -384,15 +429,21 @@ export default function Products() {
           </div>
         </div>
 
+
         <div
-          className={`product flex flex-col gap-8 w-full max-w-[392px] h-[424px] `}
+          className={`product flex flex-col gap-8 w-full max-w-[392px] h-[424px] relative`}
         >
+          <div className={`bage absolute  text-white top-[16px] left-[16px]  h-[32px]
+                rounded-md pt-[4px] pb-[4px] pr-[8px] pl-[8px]
+                font-[400] text-[14px] flex justify-center items-center
+                  bg-black w-[88px]
+                  `}>Best Seller</div>
           <Image
             src={pic}
             alt="image"
             className={`w-full h-[304px] rounded-sm`}
           />
-          <div className="cat  flex flex-col gap-[8px]">
+          <div className="cat flex flex-col gap-[8px]">
             <span
               className={`${classes.cat_type} flex justify-between items-center font-[400] leading-[24px]`}
             >
@@ -417,12 +468,12 @@ export default function Products() {
                 240.00 EGP
               </span>
               <span
-                className={`${classes.price_before_discount} line-through font-[400] leading-[24px] text-[14px]`}
+                className={`text-lime-800 line-through font-[400] leading-[24px] text-[14px]`}
               >
                 640.00 EGP
               </span>
               <span
-                className={`${classes.money_saved}  font-[400] leading-[24px] text-[14px]`}
+                className={`text-red-600  font-[400] leading-[24px] text-[14px]`}
               >
                 Save 400 EGP
               </span>
@@ -431,14 +482,19 @@ export default function Products() {
         </div>
 
         <div
-          className={`product flex flex-col gap-8 w-full max-w-[392px] h-[424px] `}
+          className={`product flex flex-col gap-8 w-full max-w-[392px] h-[424px] relative`}
         >
+          <div className={`bage absolute  text-white top-[16px] left-[16px]  h-[32px]
+                rounded-md pt-[4px] pb-[4px] pr-[8px] pl-[8px]
+                font-[400] text-[14px] flex justify-center items-center
+                  bg-black w-[88px]
+                  `}>Best Seller</div>
           <Image
             src={pic}
             alt="image"
             className={`w-full h-[304px] rounded-sm`}
           />
-          <div className="cat  flex flex-col gap-[8px]">
+          <div className="cat flex flex-col gap-[8px]">
             <span
               className={`${classes.cat_type} flex justify-between items-center font-[400] leading-[24px]`}
             >
@@ -463,12 +519,12 @@ export default function Products() {
                 240.00 EGP
               </span>
               <span
-                className={`${classes.price_before_discount} line-through font-[400] leading-[24px] text-[14px]`}
+                className={`text-lime-800 line-through font-[400] leading-[24px] text-[14px]`}
               >
                 640.00 EGP
               </span>
               <span
-                className={`${classes.money_saved}  font-[400] leading-[24px] text-[14px]`}
+                className={`text-red-600  font-[400] leading-[24px] text-[14px]`}
               >
                 Save 400 EGP
               </span>
@@ -477,14 +533,19 @@ export default function Products() {
         </div>
 
         <div
-          className={`product flex flex-col gap-8 w-full max-w-[392px] h-[424px] `}
+          className={`product flex flex-col gap-8 w-full max-w-[392px] h-[424px] relative`}
         >
+          <div className={`bage absolute  text-white top-[16px] left-[16px]  h-[32px]
+                rounded-md pt-[4px] pb-[4px] pr-[8px] pl-[8px]
+                font-[400] text-[14px] flex justify-center items-center
+                  bg-black w-[88px]
+                  `}>Best Seller</div>
           <Image
             src={pic}
             alt="image"
             className={`w-full h-[304px] rounded-sm`}
           />
-          <div className="cat  flex flex-col gap-[8px]">
+          <div className="cat flex flex-col gap-[8px]">
             <span
               className={`${classes.cat_type} flex justify-between items-center font-[400] leading-[24px]`}
             >
@@ -509,18 +570,124 @@ export default function Products() {
                 240.00 EGP
               </span>
               <span
-                className={`${classes.price_before_discount} line-through font-[400] leading-[24px] text-[14px]`}
+                className={`text-lime-800 line-through font-[400] leading-[24px] text-[14px]`}
               >
                 640.00 EGP
               </span>
               <span
-                className={`${classes.money_saved}  font-[400] leading-[24px] text-[14px]`}
+                className={`text-red-600  font-[400] leading-[24px] text-[14px]`}
               >
                 Save 400 EGP
               </span>
             </div>
           </div>
         </div>
+
+        <div
+          className={`product flex flex-col gap-8 w-full max-w-[392px] h-[424px] relative`}
+        >
+          <div className={`bage absolute  text-white top-[16px] left-[16px]  h-[32px]
+                rounded-md pt-[4px] pb-[4px] pr-[8px] pl-[8px]
+                font-[400] text-[14px] flex justify-center items-center
+                  bg-black w-[88px]
+                  `}>Best Seller</div>
+          <Image
+            src={pic}
+            alt="image"
+            className={`w-full h-[304px] rounded-sm`}
+          />
+          <div className="cat flex flex-col gap-[8px]">
+            <span
+              className={`${classes.cat_type} flex justify-between items-center font-[400] leading-[24px]`}
+            >
+              <span>
+                Oils / <span>Essential Oils</span>
+              </span>
+              <span className={`rate flex justify-center items-center gap-2`}>
+                <AiFillStar />
+                <span>4.5</span>
+              </span>
+            </span>
+
+            <p
+              className={`product_name font-[700] leading-[40px] tracking-[1px] text-[20px]`}
+            >
+              Jojoba OIi 240ml
+            </p>
+            <div className={`price flex justify-between items-center`}>
+              <span
+                className={`price_after_discount font-[700] leading-[24px] tracking-[1px] text-[14px]`}
+              >
+                240.00 EGP
+              </span>
+              <span
+                className={`text-lime-800 line-through font-[400] leading-[24px] text-[14px]`}
+              >
+                640.00 EGP
+              </span>
+              <span
+                className={`text-red-600  font-[400] leading-[24px] text-[14px]`}
+              >
+                Save 400 EGP
+              </span>
+            </div>
+          </div>
+        </div>
+
+        <div
+          className={`product flex flex-col gap-8 w-full max-w-[392px] h-[424px] relative`}
+        >
+          <div className={`bage absolute  text-white top-[16px] left-[16px]  h-[32px]
+                rounded-md pt-[4px] pb-[4px] pr-[8px] pl-[8px]
+                font-[400] text-[14px] flex justify-center items-center
+                  bg-black w-[88px]
+                  `}>Best Seller</div>
+          <Image
+            src={pic}
+            alt="image"
+            className={`w-full h-[304px] rounded-sm`}
+          />
+          <div className="cat flex flex-col gap-[8px]">
+            <span
+              className={`${classes.cat_type} flex justify-between items-center font-[400] leading-[24px]`}
+            >
+              <span>
+                Oils / <span>Essential Oils</span>
+              </span>
+              <span className={`rate flex justify-center items-center gap-2`}>
+                <AiFillStar />
+                <span>4.5</span>
+              </span>
+            </span>
+
+            <p
+              className={`product_name font-[700] leading-[40px] tracking-[1px] text-[20px]`}
+            >
+              Jojoba OIi 240ml
+            </p>
+            <div className={`price flex justify-between items-center`}>
+              <span
+                className={`price_after_discount font-[700] leading-[24px] tracking-[1px] text-[14px]`}
+              >
+                240.00 EGP
+              </span>
+              <span
+                className={`text-lime-800 line-through font-[400] leading-[24px] text-[14px]`}
+              >
+                640.00 EGP
+              </span>
+              <span
+                className={`text-red-600  font-[400] leading-[24px] text-[14px]`}
+              >
+                Save 400 EGP
+              </span>
+            </div>
+          </div>
+        </div>
+
+
+      
+      
       </div>
       {/* -------------------------Pagination--------------------------------- */}
 <div className="w-fit mx-auto mt-[50px] mb-[30px]">

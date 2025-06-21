@@ -3,7 +3,9 @@ const BlogComp = () => {
   return (
     <div className="w-full max-w-[1720px] mx-auto flex flex-col gap-[56px]">
       <h1
-        className={`font-[700] text-[56px] leading-[64px] px-[300px] py-[46px]`}
+        className={`font-[700] text-[56px] leading-[64px] px-[300px] py-[46px]
+          max-md:p-[10px]
+          `}
       >
         Blogs
       </h1>
@@ -12,11 +14,13 @@ const BlogComp = () => {
           {/* ---------------image block-------------- */}
 
           <div
-            className={`img  h-[933px]  
-            flex flex-col gap-[24px]
+            className={`img  h-[933px] flex flex-col gap-[24px]
+              max-lg:h-full
             `}
           >
-            <div className="relative overflow-hidden h-[869px]">
+            <div className={`relative overflow-hidden h-[869px]
+              max-lg:h-[350px]
+              `}>
               <Image fill src="/pic3.jpg" alt="blog image" />
             </div>
             <span>
@@ -29,9 +33,14 @@ const BlogComp = () => {
             </span>
             {/* -----------desc------------------ */}
             <div
-              className={`w-full max-w-[870px] h-[176px] mx-auto flex flex-col gap-[24px] justify-center items-center`}
+              className={`w-full max-w-[870px] h-[176px] mx-auto flex flex-col gap-[24px] justify-center items-center
+                max-sm:mx-0
+                max-lg:h-full
+                `}
             >
-              <h2 className={`font-[700] text-[48px] leading-[56px]`}>
+              <h2 className={`font-[700] text-[48px] leading-[56px]
+                max-sm:text-[28px] max-sm:text-center
+                `}>
                 The Secret to Healthy, Glowing Hair
               </h2>
               <p
@@ -96,9 +105,14 @@ const BlogComp = () => {
           </h3>
             {/* ------------------- */}
 
-          <div className={`w-full max-w-[1659px] h-[707px] mx-auto flex gap-[48px] flex-wrap max-lg:h-full`}>
-            <div className="w-full max-w-[521px] h-[707px]">
-              <div className="img h-[507px] w-full max-w-[521px] relative overflow-hidden">
+          <div className={`w-full max-w-[1659px] h-[707px] mx-auto flex gap-[48px] flex-wrap 
+            max-lg:h-full`}>
+            <div className={`w-full max-w-[521px] h-[707px] 
+              max-md:h-full
+              `}>
+              <div className={`img h-[507px] w-full max-w-[521px] relative overflow-hidden
+                max-md:h-[300px]
+                `}>
                 <Image src="/pic4.jpg" fill alt="blog image" />
               </div>
               {/* -----txt----- */}
@@ -111,8 +125,12 @@ const BlogComp = () => {
               </div>
             </div>
             {/* ------------------- */}
-            <div className="w-full max-w-[521px] h-[707px]">
-              <div className="img h-[507px] w-full max-w-[521px] relative overflow-hidden">
+            <div className={`w-full max-w-[521px] h-[707px] 
+              max-md:h-full
+              `}>
+              <div className={`img h-[507px] w-full max-w-[521px] relative overflow-hidden
+                max-md:h-[300px]
+                `}>
                 <Image src="/pic4.jpg" fill alt="blog image" />
               </div>
               {/* -----txt----- */}
@@ -125,8 +143,12 @@ const BlogComp = () => {
               </div>
             </div>
             {/* ------------------- */}
-            <div className="w-full max-w-[521px] h-[707px]">
-              <div className="img h-[507px] w-full max-w-[521px] relative overflow-hidden">
+            <div className={`w-full max-w-[521px] h-[707px] 
+              max-md:h-full
+              `}>
+              <div className={`img h-[507px] w-full max-w-[521px] relative overflow-hidden
+                max-md:h-[300px]
+                `}>
                 <Image src="/pic4.jpg" fill alt="blog image" />
               </div>
               {/* -----txt----- */}

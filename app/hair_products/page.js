@@ -1,5 +1,9 @@
+import HairBlog from "components/HairBlog";
+
 export default function HairProducts() {
   return (
-    <div>Hair products page</div>
+    <div>
+      <HairBlog/>
+    </div>
   )
 }

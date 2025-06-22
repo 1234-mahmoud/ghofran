@@ -4,7 +4,7 @@ import ProductDetails from "components/ProductDetails";
 import Reviews from "components/Reviews";
 import React from "react";
 
-const page = ({ params }) => {
+const page = () => {
   return (
     <div>
       {/* <h2>Product Details for ID: {params.product_id}</h2> */}

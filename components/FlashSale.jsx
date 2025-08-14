@@ -13,7 +13,12 @@ import { ContextProvider } from "context/AppProvider";
 const FlashSale = () => {
   const prevRef = useRef(null);
   const nextRef = useRef(null);
-  const { now } = useContext(ContextProvider);
+  const { now,
+      days,
+    hours,
+    minutes,
+    seconds,
+   } = useContext(ContextProvider);
 
   return (
     <div className="container mx-auto px-4 relative
@@ -60,9 +65,9 @@ const FlashSale = () => {
                         <span>
                           {
                             [
-                              now.getHours(),
-                              now.getMinutes(),
-                              now.getSeconds(),
+                              days,
+                              minutes,
+                              seconds,
                             ][index]
                           }
                         </span>

@@ -11,7 +11,14 @@ import { ContextProvider } from "context/AppProvider";
 
 import Image from "next/image";
 export default function Header() {
-  const { show, setShow, toggleShow, now } = useContext(ContextProvider);
+  const { show, setShow, toggleShow, now,
+
+  days,
+    hours,
+    minutes,
+    seconds,
+
+   } = useContext(ContextProvider);
   const sidebarRef = useRef();
 
   useEffect(() => {
@@ -31,6 +38,9 @@ export default function Header() {
       document.removeEventListener("mousedown", handleClickOutside);
     };
   }, [show]);
+
+  // ----------------------------------
+
 
   return (
     <div>
@@ -178,19 +188,22 @@ export default function Header() {
         <p className={`text-[14px] font-[700] tracking-[1px] max-lg:text-[12px] max-sm:text-[11px]`}>
           Free Shipping on Order Above 1000EGP | GET OFFER
         </p>
-        <div className={`${classes.data_time} flex items-center gap-[24px] max-lg:gap-[12px] max-sm:gap-[8px] `}>
-          {["Days", "Hours", "Minutes", "Seconds"].map((label, index) => (
-            <div key={index} className="flex justify-center items-center gap-[24px]">
-           <span>   {index > 0 && ':'}</span>
-              <div className="flex justify-center items-center font-[700] text-[1.25rem] max-lg:text-[1rem] max-sm:text-[0.9rem]">
-                <span className={`flex flex-col justify-center items-center`}>
-                  <span>{[now.getDate(), now.getHours(), now.getMinutes(), now.getSeconds()][index]}</span>
-                  {label}
-                </span>
-              </div>
-            </div>
-          ))}
+       <div className="flex items-center gap-[24px]">
+      {[
+        { label: "Days", value: days },
+        { label: "Hours", value: hours },
+        { label: "Minutes", value: minutes },
+        { label: "Seconds", value: seconds },
+      ].map((item, index) => (
+        <div key={index} className="flex justify-center items-center gap-[8px]">
+          {index > 0 && <span>:</span>}
+          <div className="flex flex-col items-center font-[700] text-[1.25rem]">
+            <span>{String(item.value).padStart(2, "0")}</span>
+            <span>{item.label}</span>
+          </div>
         </div>
+      ))}
+    </div>
       </div>
       
     </div>

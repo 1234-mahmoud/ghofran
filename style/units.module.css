@@ -1,0 +1,25 @@
+.my_slider {
+  --track-color: #222;
+  --range-color: #000;
+  --thumb-color: #000;
+  --active-thumb-color: #000;
+  --disabled-opacity: 0.5;
+  margin-top: 10px;
+}
+
+/* Override the default range slider styles to ensure black background */
+.my_slider :global(.range-slider__range) {
+  background-color: #000 !important;
+}
+
+.my_slider :global(.range-slider__thumb) {
+  background-color: #000 !important;
+}
+
+.my_slider :global(.range-slider__thumb--active) {
+  background-color: #000 !important;
+}
+
+.my_slider :global(.range-slider__track) {
+  background-color: #222 !important;
+} 

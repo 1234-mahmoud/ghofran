@@ -1,28 +1,40 @@
-'use client'
-import React, { useState, createContext,useEffect} from "react";
+"use client";
+import React, { useState, createContext, useEffect } from "react";
 
 const ContextProvider = createContext();
 
 function AppProvider({ children }) {
-
-    const [now, setNow] = useState(new Date());
+  const [now, setNow] = useState(2 * 24 * 60 * 60);
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setNow(new Date());
+      setNow((prev) => {
+        if (prev <= 1) {
+          clearInterval(interval);
+          return 0;
+        }
+        return prev - 1;
+      });
     }, 1000);
 
     return () => clearInterval(interval);
   }, []);
+
+
+
+   const days = Math.floor(now / (24 * 60 * 60));
+  const hours = Math.floor((now % (24 * 60 * 60)) / 3600);
+  const minutes = Math.floor((now % 3600) / 60);
+  const seconds = now % 60;
+
+
 
   const [show, setShow] = useState(false);
   const toggleShow = () => {
     setShow(!show);
   };
 
-  
-
-/*
+  /*
   const [cart, setCart] = useState(
     localStorage.getItem("cart")
       ? JSON.parse(localStorage.getItem("cart"))
@@ -86,14 +98,21 @@ useEffect(() => {
   });
 */
   const values = {
- show,
- setShow,
- toggleShow,
- now,
+    show,
+    setShow,
+    toggleShow,
+    now,
+    days,
+    hours,
+    minutes,
+    seconds,
   };
 
-
-  return <ContextProvider.Provider value={values}>{children}</ContextProvider.Provider>;
+  return (
+    <ContextProvider.Provider value={values}>
+      {children}
+    </ContextProvider.Provider>
+  );
 }
 
 export { ContextProvider, AppProvider };

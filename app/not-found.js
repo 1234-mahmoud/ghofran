@@ -1,13 +1,12 @@
-// app/error.js
+// app/not-found.js
 "use client";
 import Link from "next/link";
 
-export default function GlobalError() {
-
+export default function NotFound() {
   return (
     <div className={`  flex justify-center items-center flex-col gap-20`}>
       <h2 className="text-gray-700 text-4xl text-center pt-[100px] font-extrabold">
-        Something went wrong in the app 😓
+        Page not found 😓
       </h2>
      
       <button

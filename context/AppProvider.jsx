@@ -3,40 +3,6 @@ import React, { useState, createContext, useEffect } from "react";
 
 const ContextProvider = createContext();
 
-// Custom hook for safe localStorage access
-function useLocalStorage(key, initialValue) {
-  const [storedValue, setStoredValue] = useState(initialValue);
-  const [isLoaded, setIsLoaded] = useState(false);
-
-  useEffect(() => {
-    try {
-      if (typeof window !== 'undefined') {
-        const item = window.localStorage.getItem(key);
-        if (item) {
-          setStoredValue(JSON.parse(item));
-        }
-        setIsLoaded(true);
-      }
-    } catch (error) {
-      console.error(`Error reading localStorage key "${key}":`, error);
-      setIsLoaded(true);
-    }
-  }, [key]);
-
-  const setValue = (value) => {
-    try {
-      setStoredValue(value);
-      if (typeof window !== 'undefined') {
-        window.localStorage.setItem(key, JSON.stringify(value));
-      }
-    } catch (error) {
-      console.error(`Error setting localStorage key "${key}":`, error);
-    }
-  };
-
-  return [storedValue, setValue, isLoaded];
-}
-
 function AppProvider({ children }) {
   const [now, setNow] = useState(2 * 24 * 60 * 60);
   const [isClient, setIsClient] = useState(false);
@@ -70,8 +36,8 @@ function AppProvider({ children }) {
     setShow(!show);
   };
 
-  // Use custom hook for safe localStorage access
-  const [cart, setCart, isCartLoaded] = useLocalStorage("cart", []);
+  // Simple in-memory cart without localStorage
+  const [cart, setCart] = useState([]);
 
   const addToCart = (item) => {
     const isItemInCart = cart.find((cartItem) => cartItem.id === item.id);
@@ -139,7 +105,6 @@ function AppProvider({ children }) {
     getCartTotal,
     currency,
     isClient,
-    isCartLoaded,
   };
 
   return (

@@ -1,7 +1,7 @@
 import Products from "../../components/Products";
 
 export default async function Shop() {
-  await new Promise((resolve) => setTimeout(resolve, 2000));
+  await new Promise((resolve) => setTimeout(resolve, 1000));
   return (
     <div>
       <Products />

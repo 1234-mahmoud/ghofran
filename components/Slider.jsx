@@ -36,7 +36,7 @@ export default function Slider() {
         `}
       >
         <SwiperSlide className='reltaive overflow-hidden'>
-          <Image src="/slide_1.jpg" alt="slide-img" fill />
+          <Image src="/slide_1.jpg" alt="slide-img" fill  />
         </SwiperSlide>
         <SwiperSlide className='reltaive overflow-hidden'>
           <Image src="/slide_2.jpg" alt="slide-img" fill />

@@ -1,0 +1,352 @@
+[
+  {
+    "id": 1,
+    "name": "Lavender Essential Oil",
+    "weight": "100 mg",
+    "priceBefore": 25.0,
+    "priceAfter": 18.0
+},
+  {
+    "id": 2,
+    "name": "Peppermint Oil",
+    "weight": "150 mg",
+    "priceBefore": 22.5,
+    "priceAfter": 16.5
+},
+  {
+    "id": 3,
+    "name": "Tea Tree Oil",
+    "weight": "200 mg",
+    "priceBefore": 28.0,
+    "priceAfter": 20.0
+},
+  {
+    "id": 4,
+    "name": "Eucalyptus Oil",
+    "weight": "250 mg",
+    "priceBefore": 30.0,
+    "priceAfter": 21.0
+},
+  {
+    "id": 5,
+    "name": "Rosemary Oil",
+    "weight": "300 mg",
+    "priceBefore": 27.0,
+    "priceAfter": 19.0
+},
+  {
+    "id": 6,
+    "name": "Chamomile Oil",
+    "weight": "180 mg",
+    "priceBefore": 26.0,
+    "priceAfter": 18.5
+},
+  {
+    "id": 7,
+    "name": "Frankincense Oil",
+    "weight": "220 mg",
+    "priceBefore": 35.0,
+    "priceAfter": 26.0
+},
+  {
+    "id": 8,
+    "name": "Cedarwood Oil",
+    "weight": "250 mg",
+    "priceBefore": 24.0,
+    "priceAfter": 17.0
+},
+  {
+    "id": 9,
+    "name": "Sandalwood Oil",
+    "weight": "200 mg",
+    "priceBefore": 40.0,
+    "priceAfter": 29.0
+ },
+  {
+    "id": 10,
+    "name": "Lemon Oil",
+    "weight": "150 mg",
+    "priceBefore": 20.0,
+    "priceAfter": 14.5
+},
+  {
+    "id": 11,
+    "name": "Ginger Oil",
+    "weight": "200 mg",
+    "priceBefore": 29.0,
+    "priceAfter": 21.0
+},
+  {
+    "id": 12,
+    "name": "Clove Oil",
+    "weight": "180 mg",
+    "priceBefore": 25.0,
+    "priceAfter": 18.5
+},
+  {
+    "id": 13,
+    "name": "Bergamot Oil",
+    "weight": "220 mg",
+    "priceBefore": 33.0,
+    "priceAfter": 25.0
+},
+  {
+    "id": 14,
+    "name": "Patchouli Oil",
+    "weight": "250 mg",
+    "priceBefore": 32.0,
+    "priceAfter": 24.0
+},
+  {
+    "id": 15,
+    "name": "Cypress Oil",
+    "weight": "200 mg",
+    "priceBefore": 28.0,
+    "priceAfter": 20.5
+},
+  {
+    "id": 16,
+    "name": "Oregano Oil",
+    "weight": "150 mg",
+    "priceBefore": 27.0,
+    "priceAfter": 19.5
+},
+  {
+    "id": 17,
+    "name": "Thyme Oil",
+    "weight": "180 mg",
+    "priceBefore": 26.0,
+    "priceAfter": 19.0
+},
+  {
+    "id": 18,
+    "name": "Cinnamon Oil",
+    "weight": "200 mg",
+    "priceBefore": 30.0,
+    "priceAfter": 22.0
+},
+  {
+    "id": 19,
+    "name": "Myrrh Oil",
+    "weight": "220 mg",
+    "priceBefore": 38.0,
+    "priceAfter": 29.0
+},
+  {
+    "id": 20,
+    "name": "Geranium Oil",
+    "weight": "250 mg",
+    "priceBefore": 34.0,
+    "priceAfter": 25.5
+},
+  {
+    "id": 21,
+    "name": "Ylang Ylang Oil",
+    "weight": "200 mg",
+    "priceBefore": 36.0,
+    "priceAfter": 27.0
+},
+  {
+    "id": 22,
+    "name": "Vetiver Oil",
+    "weight": "180 mg",
+    "priceBefore": 37.0,
+    "priceAfter": 28.0
+},
+  {
+    "id": 23,
+    "name": "Lemongrass Oil",
+    "weight": "150 mg",
+    "priceBefore": 24.0,
+    "priceAfter": 17.5
+},
+  {
+    "id": 24,
+    "name": "Black Seed Oil",
+    "weight": "300 mg",
+    "priceBefore": 31.0,
+    "priceAfter": 23.0
+},
+  {
+    "id": 25,
+    "name": "Hemp Seed Oil",
+    "weight": "250 mg",
+    "priceBefore": 29.0,
+    "priceAfter": 21.5
+},
+  {
+    "id": 26,
+    "name": "Flaxseed Oil",
+    "weight": "200 mg",
+    "priceBefore": 26.0,
+    "priceAfter": 19.5
+},
+  {
+    "id": 27,
+    "name": "Evening Primrose Oil",
+    "weight": "220 mg",
+    "priceBefore": 35.0,
+    "priceAfter": 27.0
+},
+  {
+    "id": 28,
+    "name": "Argan Oil",
+    "weight": "180 mg",
+    "priceBefore": 30.0,
+    "priceAfter": 22.5
+},
+  {
+    "id": 29,
+    "name": "Jojoba Oil",
+    "weight": "200 mg",
+    "priceBefore": 28.0,
+    "priceAfter": 20.5
+},
+  {
+    "id": 30,
+    "name": "Marula Oil",
+    "weight": "150 mg",
+    "priceBefore": 33.0,
+    "priceAfter": 24.5
+},
+  {
+    "id": 31,
+    "name": "Sea Buckthorn Oil",
+    "weight": "250 mg",
+    "priceBefore": 36.0,
+    "priceAfter": 27.5
+},
+  {
+    "id": 32,
+    "name": "Avocado Oil",
+    "weight": "200 mg",
+    "priceBefore": 25.0,
+    "priceAfter": 18.5
+},
+  {
+    "id": 33,
+    "name": "Castor Oil",
+    "weight": "300 mg",
+    "priceBefore": 27.0,
+    "priceAfter": 20.0
+},
+  {
+    "id": 34,
+    "name": "Macadamia Oil",
+    "weight": "220 mg",
+    "priceBefore": 29.0,
+    "priceAfter": 21.5
+},
+  {
+    "id": 35,
+    "name": "Pomegranate Seed Oil",
+    "weight": "180 mg",
+    "priceBefore": 32.0,
+    "priceAfter": 24.0
+},
+  {
+    "id": 36,
+    "name": "Borage Oil",
+    "weight": "200 mg",
+    "priceBefore": 30.0,
+    "priceAfter": 22.5
+},
+  {
+    "id": 37,
+    "name": "Camellia Oil",
+    "weight": "150 mg",
+    "priceBefore": 28.0,
+    "priceAfter": 20.5
+},
+  {
+    "id": 38,
+    "name": "Safflower Oil",
+    "weight": "220 mg",
+    "priceBefore": 26.0,
+    "priceAfter": 19.5
+},
+  {
+    "id": 39,
+    "name": "Tamanu Oil",
+    "weight": "250 mg",
+    "priceBefore": 34.0,
+    "priceAfter": 25.5
+},
+  {
+    "id": 40,
+    "name": "Rosehip Oil",
+    "weight": "200 mg",
+    "priceBefore": 31.0,
+    "priceAfter": 23.0
+},
+  {
+    "id": 41,
+    "name": "Neem Oil",
+    "weight": "180 mg",
+    "priceBefore": 27.0,
+    "priceAfter": 20.0
+},
+  {
+    "id": 42,
+    "name": "Moringa Oil",
+    "weight": "150 mg",
+    "priceBefore": 29.0,
+    "priceAfter": 21.5
+},
+  {
+    "id": 43,
+    "name": "Meadowfoam Seed Oil",
+    "weight": "200 mg",
+    "priceBefore": 33.0,
+    "priceAfter": 25.0
+},
+  {
+    "id": 44,
+    "name": "Kukui Nut Oil",
+    "weight": "250 mg",
+    "priceBefore": 32.0,
+    "priceAfter": 24.0
+},
+  {
+    "id": 45,
+    "name": "Baobab Oil",
+    "weight": "300 mg",
+    "priceBefore": 35.0,
+    "priceAfter": 26.5
+},
+  {
+    "id": 46,
+    "name": "Perilla Seed Oil",
+    "weight": "220 mg",
+    "priceBefore": 28.0,
+    "priceAfter": 20.5
+},
+  {
+    "id": 47,
+    "name": "Hibiscus Seed Oil",
+    "weight": "180 mg",
+    "priceBefore": 30.0,
+    "priceAfter": 22.0
+},
+  {
+    "id": 48,
+    "name": "Watermelon Seed Oil",
+    "weight": "150 mg",
+    "priceBefore": 26.0,
+    "priceAfter": 19.5
+},
+  {
+    "id": 49,
+    "name": "Prickly Pear Seed Oil",
+    "weight": "200 mg",
+    "priceBefore": 38.0,
+    "priceAfter": 29.0
+},
+  {
+    "id": 50,
+    "name": "Grape Seed Oil",
+    "weight": "250 mg",
+    "priceBefore": 24.0,
+    "priceAfter": 17.5
+}
+]

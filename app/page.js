@@ -14,7 +14,7 @@ export default function Home() {
       <TopCategories />
       <BestSellerProducts title="Best Seller" badge="Best Seller" />
       <OurVideos title="Our Videos" />
-      <Year />
+      {/* <Year /> */}
       <FlashSale />
       <Customers />
       <NewArrivals />

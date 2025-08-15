@@ -1,7 +1,11 @@
+"use client";
+import { useContext } from "react";
 import classes from "../style/payment.module.css";
 import Image from "next/image";
 import Link from "next/link";
+import { ContextProvider } from "context/AppProvider";
 const Payment = () => {
+  const { currency, cart, getCartTotal } = useContext(ContextProvider);
   return (
     <div
       className={`my-[50px] w-full max-w-[1484px] mx-auto flex gap-[36px] 
@@ -10,11 +14,16 @@ const Payment = () => {
         
         `}
     >
-      <div className={`contact w-full max-w-[648px]
+      <div
+        className={`contact w-full max-w-[648px]
          max-xl:w-[500px]
-        `}>
-        <form action="" className={`flex flex-col gap-[64px]
-          `}>
+        `}
+      >
+        <form
+          action=""
+          className={`flex flex-col gap-[64px]
+          `}
+        >
           <div
             className={`contact_ 
             flex flex-col gap-[8px]
@@ -238,7 +247,7 @@ const Payment = () => {
                       alt="electronic payment"
                       width={68}
                       height={24}
-                      style={{marginLeft:'-20px'}}
+                      style={{ marginLeft: "-20px" }}
                     />
                   </div>
                 </div>
@@ -328,71 +337,43 @@ const Payment = () => {
             </p>
           </div>
           {/* ----------------------------------------------------- */}
-          <div
-            className={`order_box
+          {cart.map((p) => (
+            <div
+              className={`order_box
               relative flex gap-[24px] items-center py-[24px]
               ${classes.spliter}
             `}
-          >
-            <div
-              className={`prod
+            >
+              <div
+                className={`prod
               w-[112px] h-[92px] bg-gray-400 rounded-lg relative
                           `}
-            >
-              <span className={` ${classes.counter}`}>1</span>
-            </div>
-            <div
-              className={`flex justify-between items-center w-full max-w-[371px]`}
-            >
-              <p
-                className={`
+              >
+                <span className={` ${classes.counter}`}>{p.quantity}</span>
+              </div>
+              <div
+                className={`flex justify-between items-center w-full max-w-[371px]`}
+              >
+                <p
+                  className={`
                 font-[700] text-[20px] leading-[40px] tracking-[1px]
                                 `}
-              >
-                Jojoba OIi 240ml
-              </p>
-              <p
-                className={`
+                >
+                  {p.name}
+                  <span className="font-normal leading-[40px] tracking-[1px] text-[16px] ml-1">
+                    {p.weight}
+                  </span>
+                </p>
+                <p
+                  className={`
                 font-[700] text-[14px] leading-[24px] tracking-[1px]
                                 `}
-              >
-                240.00 EGP
-              </p>
+                >
+                  {currency.format(p.priceBefore)}
+                </p>
+              </div>
             </div>
-          </div>
-          {/* ------------------------- */}
-          <div
-            className={`order_box
-              relative flex gap-[24px] items-center py-[24px]
-              ${classes.spliter}
-            `}
-          >
-            <div
-              className={`prod
-              w-[112px] h-[92px] bg-gray-400 rounded-lg relative
-                          `}
-            >
-              <span className={` ${classes.counter}`}>1</span>
-            </div>
-            <div
-              className={`flex justify-between items-center w-full max-w-[371px]`}
-            >
-              <p
-                className={`
-                font-[700] text-[20px] leading-[40px] tracking-[1px]
-                                `}
-              >
-                Jojoba OIi 240ml
-              </p>
-              <p
-                className={`
-                font-[700] text-[14px] leading-[24px] tracking-[1px]
-                                `}
-              >
-                240.00 EGP
-              </p>
-            </div>
-          </div>
+          ))}
 
           {/* -------------------------------------------------------- */}
           <div
@@ -425,11 +406,13 @@ const Payment = () => {
               font-[700] text-[20px] leading-[40px] tracking-[1px]
               `}
             >
-              3 Items
+              {cart.length} Items
             </p>
-            <div className={`flex gap-[284px] items-center
+            <div
+              className={`flex gap-[284px] items-center
               max-sm:gap-[120px]
-              `}>
+              `}
+            >
               <p
                 className={`
               font-[700] text-[20px] leading-[40px] tracking-[1px]
@@ -442,13 +425,15 @@ const Payment = () => {
               font-[700] text-[14px] leading-[24px] tracking-[1px]
               `}
               >
-                720.00 EGP
+                {currency.format(getCartTotal())}
               </p>
             </div>
 
-            <div className={`flex gap-[273px] items-center
+            <div
+              className={`flex gap-[273px] items-center
                max-sm:gap-[110px]
-              `}>
+              `}
+            >
               <p
                 className={`
               font-[700] text-[20px] leading-[40px] tracking-[1px]
@@ -461,13 +446,15 @@ const Payment = () => {
               font-[700] text-[14px] leading-[24px] tracking-[1px] text-gray-300
               `}
               >
-                -100.00 EGP
+                {currency.format(0)}
               </p>
             </div>
 
-            <div className={`flex gap-[284px] items-center
+            <div
+              className={`flex gap-[284px] items-center
                max-sm:gap-[120px]
-              `}>
+              `}
+            >
               <p
                 className={`
               font-[700] text-[20px] leading-[40px] tracking-[1px]
@@ -480,7 +467,7 @@ const Payment = () => {
               font-[700] text-[14px] leading-[24px] tracking-[1px]
               `}
               >
-                35.00 EGP
+                {currency.format(35)}
               </p>
             </div>
           </div>
@@ -503,7 +490,7 @@ const Payment = () => {
               font-[700] text-[20px] leading-[40px] tracking-[1px]
               `}
             >
-              675.00 EGP
+              {currency.format(getCartTotal())}
             </p>
           </div>
         </div>

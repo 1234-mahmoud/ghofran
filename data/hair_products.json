@@ -1,0 +1,212 @@
+[
+  {
+    "id": 2,
+    "name": "Peppermint Oil",
+    "weight": "150 mg",
+    "priceBefore": 22.5,
+    "priceAfter": 16.5
+  },
+  {
+    "id": 5,
+    "name": "Rosemary Oil",
+    "weight": "300 mg",
+    "priceBefore": 27.0,
+    "priceAfter": 19.0
+  },
+  {
+    "id": 8,
+    "name": "Cedarwood Oil",
+    "weight": "250 mg",
+    "priceBefore": 24.0,
+    "priceAfter": 17.0
+  },
+  {
+    "id": 23,
+    "name": "Lemongrass Oil",
+    "weight": "150 mg",
+    "priceBefore": 24.0,
+    "priceAfter": 17.5
+  },
+  {
+    "id": 24,
+    "name": "Black Seed Oil",
+    "weight": "300 mg",
+    "priceBefore": 31.0,
+    "priceAfter": 23.0
+  },
+  {
+    "id": 25,
+    "name": "Hemp Seed Oil",
+    "weight": "250 mg",
+    "priceBefore": 29.0,
+    "priceAfter": 21.5
+  },
+  {
+    "id": 33,
+    "name": "Castor Oil",
+    "weight": "300 mg",
+    "priceBefore": 27.0,
+    "priceAfter": 20.0
+  },
+  {
+    "id": 34,
+    "name": "Macadamia Oil",
+    "weight": "220 mg",
+    "priceBefore": 29.0,
+    "priceAfter": 21.5
+  },
+  {
+    "id": 36,
+    "name": "Borage Oil",
+    "weight": "200 mg",
+    "priceBefore": 30.0,
+    "priceAfter": 22.5
+  },
+  {
+    "id": 38,
+    "name": "Safflower Oil",
+    "weight": "220 mg",
+    "priceBefore": 26.0,
+    "priceAfter": 19.5
+  },
+  {
+    "id": 41,
+    "name": "Neem Oil",
+    "weight": "180 mg",
+    "priceBefore": 27.0,
+    "priceAfter": 20.0
+  },
+  {
+    "id": 42,
+    "name": "Moringa Oil",
+    "weight": "150 mg",
+    "priceBefore": 29.0,
+    "priceAfter": 21.5
+  },
+  {
+    "id": 45,
+    "name": "Baobab Oil",
+    "weight": "300 mg",
+    "priceBefore": 35.0,
+    "priceAfter": 26.5
+  },
+  {
+    "id": 47,
+    "name": "Hibiscus Seed Oil",
+    "weight": "180 mg",
+    "priceBefore": 30.0,
+    "priceAfter": 22.0
+  },
+  {
+    "id": 50,
+    "name": "Grape Seed Oil",
+    "weight": "250 mg",
+    "priceBefore": 24.0,
+    "priceAfter": 17.5
+  },
+  {
+    "id": 2,
+    "name": "Peppermint Oil",
+    "weight": "150 mg",
+    "priceBefore": 22.5,
+    "priceAfter": 16.5
+  },
+  {
+    "id": 2,
+    "name": "Peppermint Oil",
+    "weight": "150 mg",
+    "priceBefore": 22.5,
+    "priceAfter": 16.5
+  },
+  {
+    "id": 2,
+    "name": "Peppermint Oil",
+    "weight": "150 mg",
+    "priceBefore": 22.5,
+    "priceAfter": 16.5
+  },
+  {
+    "id": 2,
+    "name": "Peppermint Oil",
+    "weight": "150 mg",
+    "priceBefore": 22.5,
+    "priceAfter": 16.5
+  },
+  {
+    "id": 2,
+    "name": "Peppermint Oil",
+    "weight": "150 mg",
+    "priceBefore": 22.5,
+    "priceAfter": 16.5
+  },
+  {
+    "id": 2,
+    "name": "Peppermint Oil",
+    "weight": "150 mg",
+    "priceBefore": 22.5,
+    "priceAfter": 16.5
+  },
+  {
+    "id": 2,
+    "name": "Peppermint Oil",
+    "weight": "150 mg",
+    "priceBefore": 22.5,
+    "priceAfter": 16.5
+  },
+  {
+    "id": 2,
+    "name": "Peppermint Oil",
+    "weight": "150 mg",
+    "priceBefore": 22.5,
+    "priceAfter": 16.5
+  },
+  {
+    "id": 2,
+    "name": "Peppermint Oil",
+    "weight": "150 mg",
+    "priceBefore": 22.5,
+    "priceAfter": 16.5
+  },
+  {
+    "id": 2,
+    "name": "Peppermint Oil",
+    "weight": "150 mg",
+    "priceBefore": 22.5,
+    "priceAfter": 16.5
+  },
+  {
+    "id": 2,
+    "name": "Peppermint Oil",
+    "weight": "150 mg",
+    "priceBefore": 22.5,
+    "priceAfter": 16.5
+  },
+  {
+    "id": 2,
+    "name": "Peppermint Oil",
+    "weight": "150 mg",
+    "priceBefore": 22.5,
+    "priceAfter": 16.5
+  },
+  {
+    "id": 2,
+    "name": "Peppermint Oil",
+    "weight": "150 mg",
+    "priceBefore": 22.5,
+    "priceAfter": 16.5
+  },
+  {
+    "id": 2,
+    "name": "Peppermint Oil",
+    "weight": "150 mg",
+    "priceBefore": 22.5,
+    "priceAfter": 16.5
+  },
+  {
+    "id": 2,
+    "name": "Peppermint Oil",
+    "weight": "150 mg",
+    "priceBefore": 22.5,
+    "priceAfter": 16.5
+  }
+]

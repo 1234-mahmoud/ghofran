@@ -11,13 +11,12 @@ import { ContextProvider } from "context/AppProvider";
 
 import Image from "next/image";
 export default function Header() {
-  const { show, setShow, toggleShow, now,
-
+  const { show, setShow, toggleShow, 
   days,
     hours,
     minutes,
     seconds,
-
+cart
    } = useContext(ContextProvider);
   const sidebarRef = useRef();
 
@@ -61,7 +60,7 @@ export default function Header() {
           <AiFillInstagram />
           <span className="flex justify-center items-center gap-[8px]">
             <IoIosCall />
-            0111273633
+            +928467468
           </span>
           <button
             onClick={toggleShow}
@@ -77,8 +76,8 @@ export default function Header() {
 
         <div className="lang">
           <select name="language" defaultValue="Arabic" className="bg-black">
-            <option value="ar">Arabic</option>
             <option value="en">English</option>
+            <option value="ar">Arabic</option>
           </select>
         </div>
       </div>
@@ -108,9 +107,14 @@ export default function Header() {
             placeholder="Search..."
           />
           <div className="utilities flex justify-between items-center gap-[16px] max-lg:gap-[8px] max-sm:gap-[8px]">
-            <Link href="/user"><AiOutlineUser /></Link>
-            <Link href="/favourite"><AiOutlineHeart /></Link>
-            <Link href="/cart"><BiCartAlt /></Link>
+            <Link className={`text-3xl`} href="/user"><AiOutlineUser /></Link>
+            <Link className={`text-3xl`} href="/favourite"><AiOutlineHeart /></Link>
+            <Link className={`text-3xl relative`} href="/cart">
+            <BiCartAlt />
+            <span className={`absolute text-[16px] top-[-20px] right-[-15px]
+              w-[30px] h-[30px] bg-black text-white rounded-full flex justify-center items-center
+              `}>{cart.length}</span>
+            </Link>
           </div>
         </div>
       </div>

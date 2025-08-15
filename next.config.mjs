@@ -12,10 +12,6 @@ const nextConfig = {
     // number of pages that should be kept simultaneously without being disposed
     pagesBufferLength: 2,
   },
-  // Disable static generation for not-found page
-  generateStaticParams: async () => {
-    return [];
-  },
 };
 
 export default nextConfig;

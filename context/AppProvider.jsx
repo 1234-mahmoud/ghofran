@@ -3,8 +3,48 @@ import React, { useState, createContext, useEffect } from "react";
 
 const ContextProvider = createContext();
 
+// Custom hook for safe localStorage access
+function useLocalStorage(key, initialValue) {
+  const [storedValue, setStoredValue] = useState(initialValue);
+  const [isLoaded, setIsLoaded] = useState(false);
+
+  useEffect(() => {
+    try {
+      if (typeof window !== 'undefined') {
+        const item = window.localStorage.getItem(key);
+        if (item) {
+          setStoredValue(JSON.parse(item));
+        }
+        setIsLoaded(true);
+      }
+    } catch (error) {
+      console.error(`Error reading localStorage key "${key}":`, error);
+      setIsLoaded(true);
+    }
+  }, [key]);
+
+  const setValue = (value) => {
+    try {
+      setStoredValue(value);
+      if (typeof window !== 'undefined') {
+        window.localStorage.setItem(key, JSON.stringify(value));
+      }
+    } catch (error) {
+      console.error(`Error setting localStorage key "${key}":`, error);
+    }
+  };
+
+  return [storedValue, setValue, isLoaded];
+}
+
 function AppProvider({ children }) {
   const [now, setNow] = useState(2 * 24 * 60 * 60);
+  const [isClient, setIsClient] = useState(false);
+
+  // Check if we're on the client side
+  useEffect(() => {
+    setIsClient(true);
+  }, []);
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -30,16 +70,8 @@ function AppProvider({ children }) {
     setShow(!show);
   };
 
-  // Initialize cart as empty array to avoid SSR issues
-  const [cart, setCart] = useState([]);
-
-  // Load cart data from localStorage on client side
-  useEffect(() => {
-    const cartData = localStorage.getItem("cart");
-    if (cartData) {
-      setCart(JSON.parse(cartData));
-    }
-  }, []);
+  // Use custom hook for safe localStorage access
+  const [cart, setCart, isCartLoaded] = useLocalStorage("cart", []);
 
   const addToCart = (item) => {
     const isItemInCart = cart.find((cartItem) => cartItem.id === item.id);
@@ -85,10 +117,6 @@ function AppProvider({ children }) {
     return cart.reduce((total, item) => total + item.priceAfter * item.quantity, 0);
   };
 
-  useEffect(() => {
-    localStorage.setItem("cart", JSON.stringify(cart));
-  }, [cart]);
-
   const currency = Intl.NumberFormat("EGP", {
     style: "currency",
     currency: "EGP",
@@ -110,6 +138,8 @@ function AppProvider({ children }) {
     deleteProduct,
     getCartTotal,
     currency,
+    isClient,
+    isCartLoaded,
   };
 
   return (

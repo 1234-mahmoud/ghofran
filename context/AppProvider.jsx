@@ -30,11 +30,16 @@ function AppProvider({ children }) {
     setShow(!show);
   };
 
-  const [cart, setCart] = useState(
-    localStorage.getItem("cart")
-      ? JSON.parse(localStorage.getItem("cart"))
-      : []
-  );
+  // Initialize cart as empty array to avoid SSR issues
+  const [cart, setCart] = useState([]);
+
+  // Load cart data from localStorage on client side
+  useEffect(() => {
+    const cartData = localStorage.getItem("cart");
+    if (cartData) {
+      setCart(JSON.parse(cartData));
+    }
+  }, []);
 
   const addToCart = (item) => {
     const isItemInCart = cart.find((cartItem) => cartItem.id === item.id);
@@ -83,13 +88,6 @@ function AppProvider({ children }) {
   useEffect(() => {
     localStorage.setItem("cart", JSON.stringify(cart));
   }, [cart]);
-
-  useEffect(() => {
-    const cartData = localStorage.getItem("cart");
-    if (cartData) {
-      setCart(JSON.parse(cartData));
-    }
-  }, []);
 
   const currency = Intl.NumberFormat("EGP", {
     style: "currency",

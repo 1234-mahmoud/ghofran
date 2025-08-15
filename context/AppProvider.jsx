@@ -26,15 +26,18 @@ function AppProvider({ children }) {
   const seconds = now % 60;
 
   const [show, setShow] = useState(false);
-  const toggleShow = () => {
-    setShow(!show);
-  };
+  const toggleShow = () => setShow((prev) => !prev);
 
-  const [cart, setCart] = useState(
-    localStorage.getItem("cart")
-      ? JSON.parse(localStorage.getItem("cart"))
-      : []
-  );
+  const [cart, setCart] = useState([]); // ✅ Start empty, fill after mount
+
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      const cartData = localStorage.getItem("cart");
+      if (cartData) {
+        setCart(JSON.parse(cartData));
+      }
+    }
+  }, []);
 
   const addToCart = (item) => {
     const isItemInCart = cart.find((cartItem) => cartItem.id === item.id);
@@ -52,10 +55,8 @@ function AppProvider({ children }) {
     }
   };
 
-  // ✅ Reduce quantity by 1
   const reduceQuantity = (item) => {
     const isItemInCart = cart.find((cartItem) => cartItem.id === item.id);
-
     if (!isItemInCart) return;
 
     if (isItemInCart.quantity === 1) {
@@ -71,7 +72,6 @@ function AppProvider({ children }) {
     }
   };
 
-  // ✅ Delete product directly
   const deleteProduct = (item) => {
     setCart(cart.filter((cartItem) => cartItem.id !== item.id));
   };
@@ -81,15 +81,10 @@ function AppProvider({ children }) {
   };
 
   useEffect(() => {
-    localStorage.setItem("cart", JSON.stringify(cart));
-  }, [cart]);
-
-  useEffect(() => {
-    const cartData = localStorage.getItem("cart");
-    if (cartData) {
-      setCart(JSON.parse(cartData));
+    if (typeof window !== "undefined") {
+      localStorage.setItem("cart", JSON.stringify(cart));
     }
-  }, []);
+  }, [cart]);
 
   const currency = Intl.NumberFormat("EGP", {
     style: "currency",

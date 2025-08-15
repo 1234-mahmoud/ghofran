@@ -1,6 +1,6 @@
 "use client";
 
-import { useRef,useContext } from "react";
+import { useRef, useContext } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper/modules";
 import "swiper/css";
@@ -13,17 +13,14 @@ import { ContextProvider } from "context/AppProvider";
 const FlashSale = () => {
   const prevRef = useRef(null);
   const nextRef = useRef(null);
-  const { now,
-      days,
-    hours,
-    minutes,
-    seconds,
-   } = useContext(ContextProvider);
+  const { now, days, hours, minutes, seconds } = useContext(ContextProvider);
 
   return (
-    <div className="container mx-auto px-4 relative
+    <div
+      className="container mx-auto px-4 relative
     max-xl:my-[150px]
-    ">
+    "
+    >
       <div className="relative">
         <div
           className={`
@@ -31,10 +28,12 @@ const FlashSale = () => {
           max-md:flex-col   max-md:gap-[24px]
           `}
         >
-          <div className={`title w-full flex gap-[24px] items-center
+          <div
+            className={`title w-full flex gap-[24px] items-center
           max-sm:flex-col max-sm:text-[1rem] 
           
-            `}>
+            `}
+          >
             <h3
               className={`font-[700] text-[40px] leading-[64px]
             max-md:text-[24px]  max-md:leading-[40px] 
@@ -44,33 +43,27 @@ const FlashSale = () => {
             >
               Flash Sale! 🔥
             </h3>
-            <h4 className={`font-[700] text-[32px] leading-[40px] text-lime-950 uppercase flex gap-[8px]
+            <h4
+              className={`font-[700] text-[32px] leading-[40px] text-lime-950 uppercase flex gap-[8px]
              max-sm:text-[1rem]
             max-lg:text-[22px]
             max-xl:text-[28px] 
                 
-                `}>
+                `}
+            >
               Ends in
               <span className={`flex text-red-600`}>
                 {["h", "m", "s"].map((label, index) => (
                   <>
                     {index > 0 && ":"}
-                    <div className="">
+                    <div className="" key={index}>
                       <span
                         className={`flex lowercase
              max-sm:text-[rem]
                             
                             `}
                       >
-                        <span>
-                          {
-                            [
-                              days,
-                              minutes,
-                              seconds,
-                            ][index]
-                          }
-                        </span>
+                        <span>{[days, minutes, seconds][index]}</span>
                         {label}
                       </span>
                     </div>
@@ -138,19 +131,14 @@ const FlashSale = () => {
           {[...Array(8)].map((_, idx) => (
             <SwiperSlide key={idx} className="flex justify-center gap-[24px]">
               <div className="product flex flex-col gap-8 w-full max-w-[392px] h-[304px] relative overflow-hidden">
-                <Image
-                  src="/pic.jpg"
-                fill
-                  alt="image"
-                  
-                />
+                <Image src="/pic.jpg" fill alt="image" />
                 <div
                   className={`bage absolute bg-lime-800 text-white top-[16px] left-[16px]  w-[111px] h-[32px]
                 rounded-md pt-[4px] pb-[4px] pr-[8px] pl-[8px]
                 font-[400] text-[14px] flex justify-center items-center
                   `}
                 >
-                  🔥Flash Sale 
+                  🔥Flash Sale
                 </div>
                 <div className="cat flex flex-col gap-2">
                   <span

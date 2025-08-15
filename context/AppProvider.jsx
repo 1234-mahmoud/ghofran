@@ -4,6 +4,7 @@ import React, { useState, createContext, useEffect } from "react";
 const ContextProvider = createContext();
 
 function AppProvider({ children }) {
+  // ⏳ Countdown timer state
   const [now, setNow] = useState(2 * 24 * 60 * 60);
 
   useEffect(() => {
@@ -25,11 +26,14 @@ function AppProvider({ children }) {
   const minutes = Math.floor((now % 3600) / 60);
   const seconds = now % 60;
 
+  // 🎯 Show/hide toggle state
   const [show, setShow] = useState(false);
   const toggleShow = () => setShow((prev) => !prev);
 
-  const [cart, setCart] = useState([]); // ✅ Start empty, fill after mount
+  // 🛒 Cart state — start empty, fill from localStorage after mount
+  const [cart, setCart] = useState([]);
 
+  // Load cart from localStorage after component mounts
   useEffect(() => {
     if (typeof window !== "undefined") {
       const cartData = localStorage.getItem("cart");
@@ -39,6 +43,14 @@ function AppProvider({ children }) {
     }
   }, []);
 
+  // Save cart to localStorage whenever it changes
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      localStorage.setItem("cart", JSON.stringify(cart));
+    }
+  }, [cart]);
+
+  // 🛒 Cart operations
   const addToCart = (item) => {
     const isItemInCart = cart.find((cartItem) => cartItem.id === item.id);
 
@@ -77,20 +89,19 @@ function AppProvider({ children }) {
   };
 
   const getCartTotal = () => {
-    return cart.reduce((total, item) => total + item.priceAfter * item.quantity, 0);
+    return cart.reduce(
+      (total, item) => total + item.priceAfter * item.quantity,
+      0
+    );
   };
 
-  useEffect(() => {
-    if (typeof window !== "undefined") {
-      localStorage.setItem("cart", JSON.stringify(cart));
-    }
-  }, [cart]);
-
+  // 💰 Currency formatter
   const currency = Intl.NumberFormat("EGP", {
     style: "currency",
     currency: "EGP",
   });
 
+  // ✅ Values exposed to all components
   const values = {
     show,
     setShow,

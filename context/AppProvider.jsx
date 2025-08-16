@@ -36,8 +36,30 @@ function AppProvider({ children }) {
     setShow(!show);
   };
 
-  // Simple in-memory cart without localStorage
+  // Cart with localStorage persistence
   const [cart, setCart] = useState([]);
+
+  // Load cart from localStorage on component mount
+  useEffect(() => {
+    if (isClient) {
+      const savedCart = localStorage.getItem('cart');
+      if (savedCart) {
+        try {
+          setCart(JSON.parse(savedCart));
+        } catch (error) {
+          console.error('Error parsing cart from localStorage:', error);
+          setCart([]);
+        }
+      }
+    }
+  }, [isClient]);
+
+  // Save cart to localStorage whenever cart changes
+  useEffect(() => {
+    if (isClient) {
+      localStorage.setItem('cart', JSON.stringify(cart));
+    }
+  }, [cart, isClient]);
 
   const addToCart = (item) => {
     const isItemInCart = cart.find((cartItem) => cartItem.id === item.id);

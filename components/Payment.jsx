@@ -2,7 +2,7 @@
 import { useContext } from "react";
 import classes from "../style/payment.module.css";
 import Image from "next/image";
-import Link from "next/link";
+
 import { ContextProvider } from "context/AppProvider";
 const Payment = () => {
   const { currency, cart, getCartTotal } = useContext(ContextProvider);

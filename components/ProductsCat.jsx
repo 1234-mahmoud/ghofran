@@ -33,7 +33,7 @@ export default function ProductsCat() {
                     ${
                     path.startsWith("/") ? classes.active : undefined
                   }`}
-                  href="/all_products"
+                  href="/shop"
                 >
                   All Products
                 </Link>

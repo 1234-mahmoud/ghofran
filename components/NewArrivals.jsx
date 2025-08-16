@@ -130,7 +130,7 @@ const NewArrivals = () => {
           bg-black text-white w-[206px] h-[48px] rounded-md mt-[48px] absolute translate-x-[-50%] left-[50%]
           font-[700] text-[16px] leading-[16px] tracking-[1px]
           `}>
-            <Link href='/all_products'>View All Products</Link>
+            <Link href='/shop'>View All Products</Link>
           </button>
     </div>
   );

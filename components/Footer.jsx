@@ -1,8 +1,5 @@
 import React from "react";
 import Image from "next/image";
-import { FaInstagram } from "react-icons/fa";
-import { BsFacebook } from "react-icons/bs";
-import { IoIosCall } from "react-icons/io";
 import Link from "next/link";
 import classes from "../style/footer.module.css";
 import { FaFacebook as FaFacebookIcon } from "react-icons/fa";

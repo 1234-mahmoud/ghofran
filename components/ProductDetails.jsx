@@ -17,7 +17,7 @@ import {
 } from "react-icons/io5";
 import { MdOutlineSettings } from "react-icons/md";
 import Image from "next/image";
-import Link from "next/link";
+
 const ProductDetails = () => {
   const prevRef = useRef(null);
   const nextRef = useRef(null);
